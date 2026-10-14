@@ -1,4 +1,4 @@
-Version 1; kinds: system-design (chapters 1-11, with algorithms rungs in 3 and 9), architecture (chapter 12), expository (whole book). 834 ideas, 5053 questions, written by Sonnet 5.5.
+Version 2 (adds all 108 distinct book pictures, encrypted; plus 62 figure questions); version 1; kinds: system-design (chapters 1-11, with algorithms rungs in 3 and 9), architecture (chapter 12), expository (whole book). 834 ideas, 5053 questions, written by Sonnet 5.5.
 
 # Designing Data-Intensive Applications: chapter map for review
 

@@ -52,7 +52,21 @@
      }
     ],
     "rule": "Call an application data-intensive when the amount, complexity or speed of change of its data, not raw CPU power, is its main difficulty.",
-    "limits": "The word is typical, not universal: an application whose time goes into heavy computation on little data is compute-intensive, and this lens fits it less well."
+    "limits": "The word is typical, not universal: an application whose time goes into heavy computation on little data is compute-intensive, and this lens fits it less well.",
+    "media": [
+     {
+      "id": "front/cover",
+      "alt": "The book cover: an O'Reilly banner, the title Designing Data-Intensive Applications on red, the subtitle about reliable, scalable and maintainable systems, a leaping wild boar engraving, and the author name Martin Kleppmann.",
+      "role": "cover",
+      "type": "image/webp"
+     },
+     {
+      "id": "ch01/opener",
+      "alt": "An ornamental title page drawing: a decorated frame holding the book title, three ribbon banners reading Reliability, Scalability and Maintainability, three small shields listing their topics, and a compass rose below.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -87,7 +101,15 @@
      }
     ],
     "rule": "Name the function each building block provides, then choose among its variants for your own requirements.",
-    "limits": "The five blocks are examples, not a full list, and one tool can serve more than one role."
+    "limits": "The five blocks are examples, not a full list, and one tool can serve more than one role.",
+    "media": [
+     {
+      "id": "front/art-1",
+      "alt": "A white silhouette of a leaping wild boar on a black background, used as title-page art.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -122,7 +144,21 @@
      }
     ],
     "rule": "When you combine tools into one service, you are designing a new data system and must provide its guarantees yourself.",
-    "limits": "The API hides the parts from clients, not from you. No composite design is right everywhere, because more than tools shapes it."
+    "limits": "The API hides the parts from clients, not from you. No composite design is right everywhere, because more than tools shapes it.",
+    "media": [
+     {
+      "id": "front/art-2",
+      "alt": "A detailed white-on-black engraving of a leaping wild boar, showing fur texture, used as title-page art.",
+      "role": "decorative",
+      "type": "image/webp"
+     },
+     {
+      "id": "ch01/img-01",
+      "alt": "Diagram of a combined data system inside a dashed boundary. A client calls through an API into application code. Application code reads an in-memory cache, sends cache misses and writes to a primary database, sends search requests to a full-text index, and sends asynchronous tasks to a message queue. Other application code captures changes from the primary database, then invalidates or updates the cache and applies updates to the search index. The queue feeds further application code that sends email to the outside world.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -157,7 +193,15 @@
      }
     ],
     "rule": "Judge a data system by whether it keeps working correctly under adversity, copes with growth, and stays productive for many people over time.",
-    "limits": "These three are the book's focus, not the whole list: the chapter's summary also names security, compliance and compatibility."
+    "limits": "These three are the book's focus, not the whole list: the chapter's summary also names security, compliance and compatibility.",
+    "media": [
+     {
+      "id": "front/art-3",
+      "alt": "A back-cover page for the book: publisher name, description of the book, two endorsement quotes, a list of bullet points about the author, a barcode and a QR code.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -192,7 +236,15 @@
      }
     ],
     "rule": "Reliability means continuing to work correctly, where correct covers the expected function, tolerance of mistakes, adequate performance and security, even when things go wrong.",
-    "limits": "Good enough performance is tied to the use case and expected load and data volume, so no single threshold fits every system."
+    "limits": "Good enough performance is tied to the use case and expected load and data volume, so no single threshold fits every system.",
+    "media": [
+     {
+      "id": "front/art-4",
+      "alt": "The Safari logo, an orange wordmark with a small grey and yellow speech-bubble shape beside it.",
+      "role": "logo",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -618,7 +670,21 @@
     ],
     "example": "A news site publishes 50 articles a minute but serves 100,000 page views a minute. Rebuilding the headline list on each view repeats the same work. Building it once at publish time makes each view cheap.",
     "rule": "When reads far outnumber writes, do more work at write time so each read is cheap.",
-    "limits": "The trade only pays off if the write-time work stays affordable."
+    "limits": "The trade only pays off if the write-time work stays affordable.",
+    "media": [
+     {
+      "id": "ch01/img-02",
+      "alt": "Three linked tables: follows table with columns follower_id and followee_id, tweets table with id, sender_id, text and timestamp, and users table with id, screen_name and profile_image. The logged-in user 17055506 points to a follows row; its followee_id 12 points to the tweet with sender_id 12 and to user 12, jack.",
+      "role": "figure",
+      "type": "image/webp"
+     },
+     {
+      "id": "ch01/img-03",
+      "alt": "Fan-out pipeline: a user posts a tweet at 4.6k writes per second into an All tweets list. Arrows fan out from it to separate timeline lists for recipients 1, 2 and 3, labelled up to 31M followers per user and 345k writes per second. At the right, users get their home timeline from their own list, labelled 300k reads per second.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -688,7 +754,15 @@
      }
     ],
     "rule": "Measure batch systems by throughput and online systems by response time.",
-    "limits": "The usual measure is not the only one; check which one the users of the system actually feel."
+    "limits": "The usual measure is not the only one; check which one the users of the system actually feel.",
+    "media": [
+     {
+      "id": "ch01/img-04",
+      "alt": "A small blue silhouette of a perched bird with a long curved beak, inside a thin square outline; a decorative ornament.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -758,7 +832,15 @@
      }
     ],
     "rule": "Describe response time by percentiles: the median for the typical wait, high percentiles for the outliers.",
-    "limits": "A percentile says nothing about the distribution above it; pick the percentiles that match what users feel."
+    "limits": "A percentile says nothing about the distribution above it; pick the percentiles that match what users feel.",
+    "media": [
+     {
+      "id": "ch01/img-05",
+      "alt": "Bar chart of response time for about 100 requests along the horizontal axis, most bars short and a few tall. Dotted horizontal lines mark the median (p50) at the lowest level, the mean (average) slightly above it, then the 95th percentile and the 99th percentile near the top. Only a few bars reach above the 95th line.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -867,7 +949,15 @@
      }
     ],
     "rule": "Expect more slow requests as calls multiply, and combine latency data by adding histograms, not averaging percentiles.",
-    "limits": "Approximations trade a little accuracy for lower cost; averaging percentiles is wrong whatever the cost saving."
+    "limits": "Approximations trade a little accuracy for lower cost; averaging percentiles is wrong whatever the cost saving.",
+    "media": [
+     {
+      "id": "ch01/img-06",
+      "alt": "A web application sends one request each to seven backends, each with its own database. Response times shown are 92, 76, 103, 143, 86, 487 and 133 ms. At top left, a bar for the end-user request spans from the start to the end of the longest bar, 487 ms.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -1146,7 +1236,15 @@
      }
     ],
     "rule": "Each layer represents the layer above it in terms of the layer below, and hides the complexity underneath behind a clean data model.",
-    "limits": "Hiding is not erasing: a choice made at a lower layer still shows through in what the layers above can do easily."
+    "limits": "Hiding is not erasing: a choice made at a lower layer still shows through in what the layers above can do easily.",
+    "media": [
+     {
+      "id": "ch02/opener",
+      "alt": "A rotated engraved fantasy map of database regions: the Relational Empire, Document Data District, Column-Family District, Key-Value District, Graph Data Peaks, a NoSQL Danger Zone, with database names as towns and rivers between them.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -1414,7 +1512,15 @@
      }
     ],
     "rule": "A relational schema can hold one-to-many data as separate tables, as structured or JSON columns, or as encoded text.",
-    "limits": "Support for structured types and JSON varies by database product, so check yours before relying on them."
+    "limits": "Support for structured types and JSON varies by database product, so check yours before relying on them.",
+    "media": [
+     {
+      "id": "ch02/img-01",
+      "alt": "A LinkedIn profile for Bill Gates on the left and, on the right, its relational tables. The users table row 251 has region_id us:91 and industry_id 131 pointing to the regions and industries tables. The positions, education and contact_info tables each have several rows carrying user_id 251, one row per job, school or contact.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -1455,7 +1561,15 @@
      }
     ],
     "rule": "Nest one-to-many data inside a single document, so one query returns the whole tree.",
-    "limits": "The advantage holds for self-contained data; relationships between documents are a separate problem."
+    "limits": "The advantage holds for self-contained data; relationships between documents are a separate problem.",
+    "media": [
+     {
+      "id": "ch02/img-02",
+      "alt": "Tree diagram rooted at user 251. Branches carry first_name, last_name and summary directly, plus a positions node with job 1 to job 3 and an education node with edu 1 and edu 2. Each job leads to job_title and organization; each edu leads to school_name, start and end.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -1595,7 +1709,21 @@
      }
     ],
     "rule": "Plan for features to turn strings into entities and references, which brings many-to-many relationships and joins.",
-    "limits": "Not every application grows more connected; an analytics store of events may never need many-to-many links."
+    "limits": "Not every application grows more connected; an analytics store of events may never need many-to-many links.",
+    "media": [
+     {
+      "id": "ch02/img-03",
+      "alt": "Screenshot of a LinkedIn experience section. A mouse pointer is over the company name Microsoft, and a pop-up shows the company page with its logo, description, size, website, headquarters and industry, plus Follow company and Careers links.",
+      "role": "figure",
+      "type": "image/webp"
+     },
+     {
+      "id": "ch02/img-04",
+      "alt": "Graph of two users in dotted regions, user 251 and user 467. Each has positions with jobs and job_title, and education entries with start and end. Arrows from jobs point to shared organization boxes org 1 to org 3 and from education to school boxes school 1 to school 3 outside the regions. User 251 has a recommendation rec 1 pointing to user 467.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -2557,7 +2685,15 @@
      }
     ],
     "rule": "Property graphs allow any vertex to link to any other, traversal in both directions, and many relationship kinds in one clean model.",
-    "limits": "Our reading: with no schema restricting links, nothing in the model stops meaningless connections."
+    "limits": "Our reading: with no schema restricting links, nothing in the model stops meaningless connections.",
+    "media": [
+     {
+      "id": "ch02/img-05",
+      "alt": "Graph of boxes with properties. Lucy and Alain, type person, are linked by married. Lucy is born_in Idaho (state) and lives_in London (city). Alain lives_in London and is born_in Beaune. Within arrows chain Idaho to United States to North America, London to England to United Kingdom to Europe, and Beaune to Cote-d'Or to Burgundy to France to Europe.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -2849,7 +2985,15 @@
      }
     ],
     "rule": "Datalog states data as facts and queries as rules, which can be combined and call themselves.",
-    "limits": "The facts and rules shown are our own sketch in Prolog-style syntax; the derived answers were checked by hand-simulating the rules."
+    "limits": "The facts and rules shown are our own sketch in Prolog-style syntax; the derived answers were checked by hand-simulating the rules.",
+    "media": [
+     {
+      "id": "ch02/img-06",
+      "alt": "Three tables named within_recursive with columns Location and Name. After rule 1 there are three rows: namerica North America, usa United States, idaho Idaho. After rule 2 once, usa North America and idaho United States are added. After rule 2 twice, idaho North America is added. Dashed lines link rows between tables.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -2916,7 +3060,15 @@
      }
     ],
     "rule": "Choose and tune a storage engine by knowing what it does for your kind of workload.",
-    "limits": "Internals knowledge guides choices and tuning; it does not replace testing with your own workload."
+    "limits": "Internals knowledge guides choices and tuning; it does not replace testing with your own workload.",
+    "media": [
+     {
+      "id": "ch03/opener",
+      "alt": "A sideways old-style engraved map of an imaginary land named Storage and Retrieval, with regions such as log-structured storage, land of the B-trees, kingdom of analytics and Hadoop region, plus ships and sea.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -3025,7 +3177,15 @@
      }
     ],
     "rule": "Map each key to its newest offset in memory, so a lookup is one hash probe plus one seek.",
-    "limits": "The map must fit in memory; once keys outgrow RAM the design stops working as described."
+    "limits": "The map must fit in memory; once keys outgrow RAM the design stops working as described.",
+    "media": [
+     {
+      "id": "ch03/img-01",
+      "alt": "Diagram: an in-memory hash map with two rows, key 123456 at byte offset 0 and key 42 at byte offset 64, each with an arrow down to a log-structured file on disk drawn as one box per byte. The file holds the text of two records, one per key: JSON documents for London and San Francisco, each ending in a newline. Arrows land on the first byte of each record.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -3099,7 +3259,21 @@
      }
     ],
     "rule": "Cut the log into segments, then compact and merge frozen ones in the background.",
-    "limits": "Merging is background work, and frozen files are replaced by new ones, never edited."
+    "limits": "Merging is background work, and frozen files are replaced by new ones, never edited.",
+    "media": [
+     {
+      "id": "ch03/img-02",
+      "alt": "Diagram: a data file segment of twelve entries of the form word: number, such as mew: 1078, purr: 2103 and yawn: 511, with repeats of mew and purr. An arrow through a compaction process leads to a compacted segment of three entries only: yawn: 511, mew: 1082, purr: 2108.",
+      "role": "figure",
+      "type": "image/webp"
+     },
+     {
+      "id": "ch03/img-03",
+      "alt": "Diagram: data file segment 1 (mew 1078 up to 1082, purr 2103 to 2108, yawn 511) and data file segment 2 (purr 2109 to 2114, mew 1083 to 1087, scratch 252) both feed arrows into a compaction and merging process. It outputs merged segments 1 and 2: yawn: 511, scratch: 252, mew: 1087, purr: 2114.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -3346,7 +3520,15 @@
      }
     ],
     "rule": "Merge sorted files by repeatedly copying the lowest current key, newest segment winning ties.",
-    "limits": "The tie rule relies on recency of whole segments; the merge itself does not compare values."
+    "limits": "The tie rule relies on recency of whole segments; the merge itself does not compare values.",
+    "media": [
+     {
+      "id": "ch03/img-04",
+      "alt": "Diagram: three sorted segments of word: number entries (handbag, handcuffs, handful, handicap, handiwork, handkerchief and so on, with different numbers per segment) feed arrows into a compaction and merging process. Output merged segments 1, 2, 3 is one sorted list with one entry per word, using the value from the newest segment that has it.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -3381,7 +3563,15 @@
      }
     ],
     "rule": "Index a few keys, jump near the target, and scan the short gap.",
-    "limits": "A sparser index means longer scans; too sparse and the scan itself becomes costly."
+    "limits": "A sparser index means longer scans; too sparse and the scan itself becomes costly.",
+    "media": [
+     {
+      "id": "ch03/img-05",
+      "alt": "Diagram: a sparse in-memory index with rows hammock 100491, handbag 102134, handsome 104667 and hangout 106812, with arrows into a sorted segment file (SSTable) on disk. Between handbag and handsome lies a shaded compressible block of sorted entries from handbag to handprinted; handsome starts the next block.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -3669,7 +3859,15 @@
      }
     ],
     "rule": "A B-tree is a tree of fixed-size pages, each owning a continuous key range.",
-    "limits": "Page size is fixed, unlike variable-size log segments; the design assumes overwriting a page keeps its address valid."
+    "limits": "Page size is fixed, unlike variable-size log segments; the design assumes overwriting a page keeps its address valid.",
+    "media": [
+     {
+      "id": "ch03/img-06",
+      "alt": "Diagram: a B-tree lookup for user_id = 251. A root page holds references separated by keys 100, 200, 300, 400, 500. The arrow for 200 to 300 goes to a child page with keys 210, 230, 250, 270, 290, whose arrow for 250 to 270 goes to a leaf page of keys 250 to 254 with values.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -3743,7 +3941,15 @@
      }
     ],
     "rule": "Overwrite the leaf page; if it is full, split it and fix the parent.",
-    "limits": "Splitting handles insertion; deleting while keeping the tree balanced is more involved."
+    "limits": "Splitting handles insertion; deleting while keeping the tree balanced is more involved.",
+    "media": [
+     {
+      "id": "ch03/img-07",
+      "alt": "Diagram in two parts: a parent page with keys 310, 333, 345 and spare space, whose child leaf holds keys 333, 335, 337, 340, 342 with no room. After adding key 334, the leaf is split into two leaves, 333 to 335 and 337 to 342, and the parent gains boundary key 337 pointing to both.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -4453,7 +4659,15 @@
      }
     ],
     "rule": "Copy OLTP data through ETL into a warehouse built for scans.",
-    "limits": "Small companies with little data may just query a normal SQL database or a spreadsheet."
+    "limits": "Small companies with little data may just query a normal SQL database or a spreadsheet.",
+    "media": [
+     {
+      "id": "ch03/img-08",
+      "alt": "Diagram: three users (customer, warehouse worker, truck driver) each use an OLTP system (ecommerce site with Sales DB, stock-keeping app with Inventory DB, vehicle route planner with Geo DB). Each database goes through extract, a transform box and load into one data warehouse; a business analyst sends a query arrow to the warehouse only.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -4524,7 +4738,15 @@
      }
     ],
     "rule": "Store each event as a fact row that points at dimension tables describing it.",
-    "limits": "The fact table can reach tens of petabytes; the shape is a formulaic template, not the only possible model."
+    "limits": "The fact table can reach tens of petabytes; the shape is a formulaic template, not the only possible model.",
+    "media": [
+     {
+      "id": "ch03/img-09",
+      "alt": "Diagram of a star schema: a central fact_sales table (date_key, product_sk, store_sk, promotion_sk, customer_sk, quantity, net_price, discount_price) with arrows from its key columns to dim_product, dim_store, dim_date, dim_customer and dim_promotion tables. The first fact row is date 140102, product 31 (Fish food), store 3 (Palo Alto), NULL promotion, NULL customer, quantity 1, price 2.49.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -4595,7 +4817,15 @@
      }
     ],
     "rule": "Store column values together so a query reads only the columns it needs.",
-    "limits": "Column storage suits scan-heavy analytics; it gives little for queries that need whole rows."
+    "limits": "Column storage suits scan-heavy analytics; it gives little for queries that need whole rows.",
+    "media": [
+     {
+      "id": "ch03/img-10",
+      "alt": "Table and lists: a fact_sales table of eight rows with columns date_key, product_sk, store_sk, promotion_sk, customer_sk, quantity, net_price, discount_price. Below it, the columnar layout lists each column's values as one file, for example date_key file contents 140102 four times then 140103 four times, in the same row order in every file.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -4630,7 +4860,15 @@
      }
     ],
     "rule": "One bitmap per distinct value, compressed by run lengths when sparse.",
-    "limits": "Only worthwhile when distinct values are few compared with the rows."
+    "limits": "Only worthwhile when distinct values are few compared with the rows.",
+    "media": [
+     {
+      "id": "ch03/img-11",
+      "alt": "Diagram: a product_sk column of 18 values (69 69 69 69 74 31 31 31 31 29 30 30 31 31 31 68 69 69). Below, one row of 18 zero or one boxes per distinct value (29, 30, 31, 68, 69, 74), with ones where that value occurs, then run-length encodings such as 31 as 5, 4, 3, 3 and 69 as 0, 4, 12, 2.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -4914,7 +5152,15 @@
      }
     ],
     "rule": "Precompute aggregates per dimension combination, and keep the raw data too.",
-    "limits": "Cubes are a performance boost for certain queries, not a replacement for raw data."
+    "limits": "Cubes are a performance boost for certain queries, not a replacement for raw data.",
+    "media": [
+     {
+      "id": "ch03/img-12",
+      "alt": "Diagram of a grid: rows are date_key (140101 to 140104), columns are product_sk (32 to 35), each cell holds a sum of net_price, for example 149.60 for 140101 and product 32. A right column totals each date (140101 is 40710.53) and a bottom row totals each product (32 is 14967.09). Three SQL SUM queries point at a cell, the right total and the bottom total.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -4986,7 +5232,15 @@
     ],
     "rule": "Plan for old and new versions to coexist, because real upgrades are gradual.",
     "limits": "A system stopped and replaced in one step meets no mix of code versions, but it accepts downtime. The book treats gradual rollout as the normal case for large applications.",
-    "example": "A shop moves its order service to version 2 on 2 of its 10 servers. For the next hour, servers on version 1 and version 2 both write order records that the other version may read."
+    "example": "A shop moves its order service to version 2 on 2 of its 10 servers. For the next hour, servers on version 1 and version 2 both write order records that the other version may read.",
+    "media": [
+     {
+      "id": "ch04/opener",
+      "alt": "Antique-style engraved map of an imaginary coastline with named regions such as Gulf of Binary Encodings and Coast of Textual Encodings, with roads linking labelled formats like JSON, Avro, Thrift, XML and Protocol Buffers.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5275,7 +5529,15 @@
      }
     ],
     "rule": "Binary JSON variants keep field names in every record, so they save only a little.",
-    "limits": "A real saving needs the field names removed, which needs a schema. Our reading: that is the step the next formats take."
+    "limits": "A real saving needs the field names removed, which needs a schema. Our reading: that is the step the next formats take.",
+    "media": [
+     {
+      "id": "ch04/img-01",
+      "alt": "MessagePack encoding of the example record, 66 bytes. A hex byte sequence is shown, then a breakdown: an object marker with 3 entries, then the strings userName, favoriteNumber and interests each with a length byte and the field name spelled in characters, followed by values: Martin, 1337 as uint16 (05 39), and an array of 2 strings, daydreaming and hacking.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5353,7 +5615,15 @@
      }
     ],
     "rule": "In Thrift and Protocol Buffers, field tags, not names, identify fields in the encoded bytes.",
-    "limits": "Tags save space but add a duty: they must be chosen and tracked, and they make the schema essential to reading the data."
+    "limits": "Tags save space but add a duty: they must be chosen and tracked, and they make the schema essential to reading the data.",
+    "media": [
+     {
+      "id": "ch04/img-02",
+      "alt": "Thrift BinaryProtocol encoding of the example record, 59 bytes. The breakdown lists each field as a type byte, a two-byte field tag (1, 2, 3), then the value: string Martin with a four-byte length 6, an i64 holding 1337 in eight bytes, and a list of 2 strings, daydreaming and hacking, each with a four-byte length. A final zero byte ends the struct.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5394,7 +5664,15 @@
      }
     ],
     "rule": "Pack type and tag into one byte and use variable-length integers, so small numbers cost one or two bytes.",
-    "limits": "Large values use more bytes, so the gain depends on the value mix. The code is a sketch consistent with the book's size ranges, not Thrift's own code."
+    "limits": "Large values use more bytes, so the gain depends on the value mix. The code is a sketch consistent with the book's size ranges, not Thrift's own code.",
+    "media": [
+     {
+      "id": "ch04/img-03",
+      "alt": "Thrift CompactProtocol encoding of the example record, 34 bytes. Each field starts with one byte whose bit pattern packs the field tag (shown as an increment from the previous one) beside the type. Martin has a one-byte length 6. The number 1337 is packed into two bytes by a variable-length integer with a sign bit. The list header byte holds 2 items and item type string. Strings carry one-byte lengths, and a zero byte ends the struct.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5547,7 +5825,15 @@
      }
     ],
     "rule": "In Protocol Buffers, repeating the same tag encodes a list, which lets optional become repeated.",
-    "limits": "Old code reading a list sees only the last element, so data can be silently lost. Thrift's list type cannot make this change."
+    "limits": "Old code reading a list sees only the last element, so data can be silently lost. Thrift's list type cannot make this change.",
+    "media": [
+     {
+      "id": "ch04/img-04",
+      "alt": "Protocol Buffers encoding of the example record, 33 bytes. Each entry is one byte holding the field tag and a wire type, then the value: tag 1 string Martin with length 6, tag 2 varint holding 1337 in two bytes (b9 0a), and then two separate entries both with tag 3, string, one for daydreaming (length 11) and one for hacking (length 7). No list marker or end-of-struct byte appears.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5584,7 +5870,15 @@
      }
     ],
     "rule": "Avro records are bare values in schema order, so decoding needs the schema.",
-    "limits": "Compactness is bought by dependence: with the wrong schema the same bytes decode into wrong values without any warning."
+    "limits": "Compactness is bought by dependence: with the wrong schema the same bytes decode into wrong values without any warning.",
+    "media": [
+     {
+      "id": "ch04/img-05",
+      "alt": "Avro encoding of the example record, 32 bytes. The breakdown shows only values, with no field tags and no type markers: length 6 then Martin, a union branch byte (1, long, not null) then 1337 in two bytes, an array count of 2, then daydreaming with length 11 and hacking with length 7, ending with a zero byte for the end of the array.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5619,7 +5913,15 @@
      }
     ],
     "rule": "Avro resolves the writer's schema against the reader's schema; they need to be compatible, not identical.",
-    "limits": "Resolution fails if the two schemas are not compatible, and it cannot work if the reader never obtains the writer's schema."
+    "limits": "Resolution fails if the two schemas are not compatible, and it cannot work if the reader never obtains the writer's schema.",
+    "media": [
+     {
+      "id": "ch04/img-06",
+      "alt": "Two tables side by side, writer's schema and reader's schema for a Person record, each with datatype and field name columns. Writer: string userName, union of null and long favoriteNumber, array of string interests, string photoURL. Reader: long userID, union of null and int favoriteNumber, string userName, array of string interests. Arrows join userName, favoriteNumber and interests across the two tables even though their row positions differ. photoURL and userID have no arrow.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -5978,7 +6280,15 @@
      }
     ],
     "rule": "When old code rewrites a record, keep the fields it does not understand.",
-    "limits": "If old code only reads, or rewrites only the columns it changed, the loss does not arise."
+    "limits": "If old code only reads, or rewrites only the columns it changed, the loss does not arise.",
+    "media": [
+     {
+      "id": "ch04/img-07",
+      "alt": "Data loss with an old application. A database holds a JSON record with userName, favoriteNumber, interests and photoURL, written by newer code. Old Java Person class code, which has no photoURL field, reads and decodes it into a model object, calls setFavoriteNumber(42), then re-encodes it to JSON and writes it back. The stored record now lacks photoURL, which the diagram labels as lost.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -6404,7 +6714,21 @@
      }
     ],
     "rule": "Replicate for latency, availability and read throughput, and expect the hard part to be propagating changes.",
-    "limits": "If the data never changes there is no replication problem to solve."
+    "limits": "If the data never changes there is no replication problem to solve.",
+    "media": [
+     {
+      "id": "ch05/opener",
+      "alt": "Engraved map of an island whose regions are labelled single-leader, multi-leader and leaderless replication, with database names along its coasts and two small sailing ships heading to other chapters.",
+      "role": "decorative",
+      "type": "image/webp"
+     },
+     {
+      "id": "ch05/img-01",
+      "alt": "Four boxes in two columns. The left column is Partition 1 with Replica 1 above Replica 2; the right is Partition 2 with Replica 1 above Replica 2. Partition 1 boxes each hold three documents keyed 136, 211 and 377; Partition 2 boxes hold 629, 696 and 858. A dashed double-headed arrow labelled copy of the same data joins the two replicas of each partition.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -6478,7 +6802,15 @@
      }
     ],
     "rule": "Writes go to the leader, which streams them in order to followers; reads can go anywhere.",
-    "limits": "Only writes are restricted to the leader. Any one follower may be behind the leader when you read from it."
+    "limits": "Only writes are restricted to the leader. Any one follower may be behind the leader when you read from it.",
+    "media": [
+     {
+      "id": "ch05/img-02",
+      "alt": "Diagram of leader-based replication. User 1234, who configures a new profile picture, sends a read-write update query to a leader replica. Replication streams carrying a data change record (table, primary key, column, old value, new value, transaction number) flow from the leader to two follower replicas. User 2345 sends a read-only select query for user 1234 to one follower.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -6548,7 +6880,15 @@
      }
     ],
     "rule": "Enable synchronous replication on one follower at a time, so you hold two up-to-date copies without a halt-on-any-failure risk.",
-    "limits": "It guarantees two current copies, not that every follower is current, so reads from asynchronous followers can be stale."
+    "limits": "It guarantees two current copies, not that every follower is current, so reads from asynchronous followers can be stale.",
+    "media": [
+     {
+      "id": "ch05/img-03",
+      "alt": "Timeline with time running left to right and lanes for user 1234, leader, follower 1 and follower 2. The user sends an update to the leader, which sends a data change to both followers and waits. Follower 1 replies ok, and then the leader sends ok to the user. Follower 2's ok reaches the leader later, after the user already has its ok.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -7117,7 +7457,15 @@
      }
     ],
     "rule": "Make a user see their own writes even if other users' updates arrive later.",
-    "limits": "It covers only the writer's own data and says nothing about when others see it."
+    "limits": "It covers only the writer's own data and says nothing about when others see it.",
+    "media": [
+     {
+      "id": "ch05/img-04",
+      "alt": "Timeline with lanes for user 1234, leader, follower 1 and follower 2. The user sends an insert of a comment to the leader and gets insert ok. The leader sends the insert to both followers, but the copy to follower 2 travels slowly. The user's select for that comment goes to follower 2 and returns no results before the insert arrives there.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -7257,7 +7605,15 @@
      }
     ],
     "rule": "Reading different followers in turn can show newer data and then older data to the same user.",
-    "limits": "If both followers are equally current, no anomaly appears. Lag differences cause it."
+    "limits": "If both followers are equally current, no anomaly appears. Lag differences cause it.",
+    "media": [
+     {
+      "id": "ch05/img-05",
+      "alt": "Timeline with lanes for user 1234, leader, follower 1, follower 2 and user 2345. User 1234 inserts a comment on the leader, which sends the insert to both followers; the copy reaching follower 2 arrives late. User 2345 first runs a select against follower 1 and gets 1 result, then runs the same select against follower 2 and gets no results.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -7362,7 +7718,15 @@
      }
     ],
     "rule": "When causally related writes travel on paths with different lag, readers can see the effect before the cause.",
-    "limits": "It matters only when writes depend on each other. Independent writes in any order cause no confusion."
+    "limits": "It matters only when writes depend on each other. Independent writes in any order cause no confusion.",
+    "media": [
+     {
+      "id": "ch05/img-06",
+      "alt": "Timeline with lanes for Mr. Poons, partition 1 leader, partition 1 follower, Mrs. Cake, partition 2 leader, partition 2 follower and an observer. Mr. Poons's question goes to the partition 1 leader and to Mrs. Cake, whose answer goes to the partition 2 leader. The answer reaches the observer through partition 2's follower first; the question arrives later through partition 1's follower.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -7578,7 +7942,15 @@
      }
     ],
     "rule": "A local leader per datacenter hides inter-datacenter latency from writers.",
-    "limits": "Reads of other regions' data stay behind by the asynchronous delay."
+    "limits": "Reads of other regions' data stay behind by the asynchronous delay.",
+    "media": [
+     {
+      "id": "ch05/img-07",
+      "alt": "Two dashed boxes, Datacenter 1 and Datacenter 2. Each holds a leader, a follower and a conflict resolution component. In each, the leader sends changes to its local follower, and a user's read-write queries go to that leader. Long curved arrows cross between the two leaders in both directions, passing through the conflict resolution components.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -7757,7 +8129,15 @@
      }
     ],
     "rule": "Concurrent writes to one record on different leaders both succeed locally and conflict when replicated.",
-    "limits": "If writers never touch the same record concurrently, no conflict appears."
+    "limits": "If writers never touch the same record concurrently, no conflict appears.",
+    "media": [
+     {
+      "id": "ch05/img-08",
+      "alt": "Timeline with lanes for user 1, leader 1, leader 2 and user 2. A page with id 123 starts with title A. User 1 sets the title to B on leader 1 and user 2 sets it to C on leader 2; each gets ok. The leaders then send each other the change messages (old A, new B and old A, new C), and each reports a conflict on receiving the other's.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8076,7 +8456,15 @@
      }
     ],
     "rule": "A topology names the paths along which writes travel between leaders: all-to-all, circular or star.",
-    "limits": "With only two leaders there is just one plausible topology: each sends to the other."
+    "limits": "With only two leaders there is just one plausible topology: each sends to the other.",
+    "media": [
+     {
+      "id": "ch05/img-09",
+      "alt": "Three small sketches of database nodes joined by arrows. (a) Circular topology: four nodes in a ring with arrows pointing one way around. (b) Star topology: a central node with two-way arrows to three outer nodes. (c) All-to-all topology: four nodes with arrows in both directions between every pair.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8186,7 +8574,15 @@
      }
     ],
     "rule": "Causally related writes can arrive out of order in all-to-all replication, and timestamps do not fix it.",
-    "limits": "Systems differ: some provide no causal ordering or do not even try to detect conflicts."
+    "limits": "Systems differ: some provide no causal ordering or do not even try to detect conflicts.",
+    "media": [
+     {
+      "id": "ch05/img-10",
+      "alt": "Timeline with client A, leaders 1, 2 and 3, and client B. Client A inserts key x with value 1 on leader 1 and gets ok; leader 1 sends the insert to leaders 2 and 3. Client B updates x to value plus one on leader 3, which sends update value 2 to leaders 1 and 2. At leader 2 a shaded box marks the update arriving before the insert.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8299,7 +8695,15 @@
      }
     ],
     "rule": "Detect stale replicas during reads and write the newer value back to them.",
-    "limits": "It only repairs what is read. Rarely read values stay stale without another mechanism."
+    "limits": "It only repairs what is read. Rarely read values stay stale without another mechanism.",
+    "media": [
+     {
+      "id": "ch05/img-11",
+      "alt": "Timeline with user 1234, replicas 1, 2 and 3, and user 2345. User 1234 sets a profile picture; replicas 1 and 2 answer ok, while replica 3 is marked node offline and the write to it is lost. User 2345 then reads all three: replicas 1 and 2 return me-new.jpg version 7, replica 3 returns me-old.jpg version 6. User 2345 then sends a set with version 7 to replica 3, which answers ok.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8373,7 +8777,15 @@
      }
     ],
     "rule": "If w + r > n, any read set overlaps any acknowledged write set, so a read sees the newest value.",
-    "limits": "Overlap guarantees that the latest value is among the responses, not that nothing can go wrong. Edge cases remain."
+    "limits": "Overlap guarantees that the latest value is among the responses, not that nothing can go wrong. Edge cases remain.",
+    "media": [
+     {
+      "id": "ch05/img-12",
+      "alt": "Five replicas in a row with n = 5. A writer above reaches replicas 1, 2 and 3 (w = 3 successful writes, outlined) while the arrows to replicas 4 and 5 are crossed out. A reader below fails to reach replicas 1 and 2 (crossed out) but reads replicas 3, 4 and 5 (r = 3 successful reads, outlined). The two outlines overlap at replica 3.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8701,7 +9113,15 @@
      }
     ],
     "rule": "Overwriting on arrival leaves replicas permanently different, so a convergence rule is required.",
-    "limits": "If a key is written by one client only, or once, these conflicts cannot arise."
+    "limits": "If a key is written by one client only, or once, these conflicts cannot arise.",
+    "media": [
+     {
+      "id": "ch05/img-13",
+      "alt": "Timeline with client A, nodes 1, 2 and 3, and client B. Client A sends set X = A and client B sends set X = B to all three nodes, but node 1 is marked unresponsive and B's write to it is lost. Node 2 receives A then B; node 3 receives B then A. A later get X by client B returns A from node 1, B from node 2 and A from node 3.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8880,7 +9300,15 @@
      }
     ],
     "rule": "A write overwrites exactly the versions the client had seen and leaves every other version as a sibling.",
-    "limits": "The server compares versions without interpreting values, so the value may be any structure."
+    "limits": "The server compares versions without interpreting values, so the value may be any structure.",
+    "media": [
+     {
+      "id": "ch05/img-14",
+      "alt": "Timeline with client 1, a database and client 2 building a shopping cart. Client 1 sets cart [milk], then [milk, flour] with version 1, then [milk, flour, eggs, bacon] with version 3. Client 2 sets [eggs] with no version, then [eggs, milk, ham] with version 2. Each reply gives a version number and the values held; from the second write onward replies list two values.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -8915,7 +9343,15 @@
      }
     ],
     "rule": "Merge siblings with logic that fits the data, because choosing one sibling loses data and a naive union resurrects deletions.",
-    "limits": "Merging in application code is complex and error-prone; automatic data structures can do it."
+    "limits": "Merging in application code is complex and error-prone; automatic data structures can do it.",
+    "media": [
+     {
+      "id": "ch05/img-15",
+      "alt": "Flow graph of cart edits (Figure 5-14, a separate diagram from the timeline). From empty, arrows lead to plus milk and plus eggs. Plus milk points to plus flour and plus ham; plus eggs points to plus ham and plus bacon; plus flour points to plus bacon. Labels [milk], [milk, flour], [eggs], [milk, flour, eggs, bacon] and [eggs, milk, ham] sit along the arrows.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9132,7 +9568,15 @@
     ],
     "rule": "Partition when one machine cannot store or serve the data, and give every record exactly one partition.",
     "limits": "While a single machine copes, partitioning adds effort for no gain, and queries that span many partitions are harder to run than single-partition queries.",
-    "example": "A music streaming service keeps 600 million play records. Splitting them into 60 partitions on 20 nodes lets each node store about a twentieth of the data and answer requests for its own partitions."
+    "example": "A music streaming service keeps 600 million play records. Splitting them into 60 partitions on 20 nodes lets each node store about a twentieth of the data and answer requests for its own partitions.",
+    "media": [
+     {
+      "id": "ch06/opener",
+      "alt": "Engraved map of a ring-shaped atoll labelled Partitioning Atoll, its coast sections named hash partitioning, key range partitioning, secondary indexes, rebalancing and request routing, with sea creatures inside and a lighthouse.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9168,7 +9612,15 @@
     ],
     "rule": "Each record has one partition, each partition has several copies, and a node can lead some partitions while following others.",
     "limits": "Replication copies a partition; it never splits one record across partitions, and a node's role for one partition says nothing about its role for another.",
-    "example": "Eight partitions run on four nodes, with each partition kept on three nodes. Node A leads partitions 1 and 5 and follows partitions 2, 3, 6 and 8, so it stores six of the eight partitions."
+    "example": "Eight partitions run on four nodes, with each partition kept on three nodes. Node A leads partitions 1 and 5 and follows partitions 2, 3, 6 and 8, so it stores six of the eight partitions.",
+    "media": [
+     {
+      "id": "ch06/img-01",
+      "alt": "Four nodes, each holding three partition replicas. Node 1 holds partition 1 leader and partition 2 and 3 followers; node 2 holds partition 2 follower, 3 leader, 4 follower; node 3 holds partition 1 follower, 2 leader, 4 follower; node 4 holds partition 1 and 3 followers and partition 4 leader. Arrows show replication streams from each leader to its followers. A user writes to partition 4 at node 4.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9240,7 +9692,15 @@
     ],
     "rule": "Assign each partition a continuous key range and keep keys sorted, so any key is located by the boundaries and ranges are cheap to scan.",
     "limits": "Equal-width ranges give uneven partitions when keys are unevenly distributed, and hot spots appear when traffic concentrates on neighbouring keys.",
-    "example": "Customer IDs 0 to 999,999 are split at 250,000, 500,000 and 750,000. ID 612,000 goes to the third partition, and a request for IDs 600,000 to 620,000 also stays on the third."
+    "example": "Customer IDs 0 to 999,999 are split at 250,000, 500,000 and 750,000. ID 612,000 goes to the third partition, and a request for IDs 600,000 to 620,000 also stays on the third.",
+    "media": [
+     {
+      "id": "ch06/img-02",
+      "alt": "A shelf of twelve encyclopedia volumes numbered 1 to 12, each spine labelled with an alphabetical key range, from A-ak to Bayes on volume 1 through to Trudeau to Zywiec on volume 12. The ranges follow alphabetical order and differ in how much of the alphabet they cover.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9316,7 +9776,15 @@
     ],
     "rule": "Hash the key and give each partition a range of hashes: load spreads evenly, but ordered range scans on the key are lost.",
     "limits": "Hashing does not remove hot spots caused by many requests for one key, and range queries on the key lose their efficiency.",
-    "example": "A chat service hashes each message ID to a 32-bit number and splits the number range into 16 equal pieces, one per partition. Consecutive message IDs land on unrelated partitions."
+    "example": "A chat service hashes each message ID to a 32-bit number and splits the number range into 16 equal pieces, one per partition. Consecutive message IDs land on unrelated partitions.",
+    "media": [
+     {
+      "id": "ch06/img-03",
+      "alt": "Six consecutive one-second timestamps, 17:08:10 to 17:08:15, each hashed with the first two bytes of MD5 to a number between 0 and 65,535, drawn against eight equal partitions p0 to p7. Values 7,372, 18,805, 50,537, 31,579, 62,253 and 24,510 land in p0, p2, p6, p3, p7 and p2 respectively, so neighbouring timestamps end up in scattered partitions.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9459,7 +9927,15 @@
     ],
     "rule": "A local index lives with its documents, so a write touches one partition, but a read on the indexed value must look at every partition.",
     "limits": "A read can stay in one partition only if the document IDs were chosen so that matching documents sit together.",
-    "example": "A recipe site keeps recipes 0 to 499 in partition 0 and 500 to 999 in partition 1. Each partition has its own list of recipe IDs for cuisine:thai, covering only the recipes it stores."
+    "example": "A recipe site keeps recipes 0 to 499 in partition 0 and 500 to 999 in partition 1. Each partition has its own list of recipe IDs for cuisine:thai, covering only the recipes it stores.",
+    "media": [
+     {
+      "id": "ch06/img-04",
+      "alt": "Two partitions, each with a primary key index of car records (id to colour, make, location) and its own secondary indexes on colour and make, covering only its own cars. Partition 0 lists colour:red as 191 and 306; partition 1 lists colour:red as 768. A user asking for a red car sends a scatter/gather read to both partitions.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9531,7 +10007,15 @@
     ],
     "rule": "A global index is partitioned by term, so a read hits one index partition while a write may hit several.",
     "limits": "A document with many terms can touch many index partitions on one write, so write-heavy workloads pay the most.",
-    "example": "A used-car index puts colours a to r in index partition 0 and s to z in index partition 1. A search for color:red asks only index partition 0, whichever partition holds each car."
+    "example": "A used-car index puts colours a to r in index partition 0 and s to z in index partition 1. A search for color:red asks only index partition 0, whichever partition holds each car.",
+    "media": [
+     {
+      "id": "ch06/img-05",
+      "alt": "Two partitions with primary key indexes of car records and secondary indexes partitioned by term. Partition 0 holds colour:black, colour:red, make:Audi, make:Dodge, make:Ford; partition 1 holds colour:silver, colour:yellow, make:Honda, make:Volvo. Colour:red in partition 0 lists 191, 306 and 768, though 768 is stored in partition 1. Dashed arrows show records pointing to index entries in the other partition. A red-car query goes to partition 0 only.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9678,7 +10162,15 @@
     ],
     "rule": "Fix many partitions up front and rebalance by moving whole partitions between nodes.",
     "limits": "A fixed count suits neither a dataset whose size is highly variable nor a cluster that may need more nodes than partitions.",
-    "example": "A cluster of 10 nodes starts with 1,000 partitions. When an 11th node joins, it takes about 90 partitions, a few from each old node, and no key changes partition."
+    "example": "A cluster of 10 nodes starts with 1,000 partitions. When an 11th node joins, it takes about 90 partitions, a few from each old node, and no key changes partition.",
+    "media": [
+     {
+      "id": "ch06/img-06",
+      "alt": "Before and after rebalancing. Four nodes (0 to 3) hold partitions p0 to p19, five each. After a fifth node is added, nodes 0 to 3 keep four partitions each and node 4 holds p4, p9, p14 and p19. Dashed lines mark partitions staying on the same node; four solid arrows show those partitions migrating, one from each old node, to node 4.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9828,7 +10320,15 @@
     ],
     "rule": "Pick where routing knowledge lives: any node, a routing tier, or the client, and keep it in step with partition moves.",
     "limits": "All three need the same up-to-date assignment; none removes the problem of keeping the deciding component informed.",
-    "example": "A cluster has three nodes. A client sends a read for key foo to a load balancer, which picks node 2. Node 2 does not own foo's partition, so it asks node 3 and returns the reply to the client."
+    "example": "A cluster has three nodes. A client sends a read for key foo to a load balancer, which picks node 2. Node 2 does not own foo's partition, so it asks node 3 and returns the reply to the client.",
+    "media": [
+     {
+      "id": "ch06/img-07",
+      "alt": "Three numbered panels showing a client getting key foo, stored on node 2. In 1, the client contacts node 0 at random, which holds partition knowledge and forwards to node 2. In 2, the client asks a routing tier that holds the knowledge and sends the request to node 2. In 3, the client holds the knowledge and connects directly to node 2. A hatched fill marks where that knowledge lives.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9868,7 +10368,15 @@
     ],
     "rule": "Keep the authoritative partition map in one coordination service, or let the nodes gossip changes to each other.",
     "limits": "Both rely on timely updates: a router with a stale picture still sends requests to the wrong node.",
-    "example": "A node joins and registers with ZooKeeper. ZooKeeper tells the routing tier, which then sends requests for the partitions moved to the new node to its address."
+    "example": "A node joins and registers with ZooKeeper. ZooKeeper tells the routing tier, which then sends requests for the partitions moved to the new node to its address.",
+    "media": [
+     {
+      "id": "ch06/img-08",
+      "alt": "A client requests Danube through a routing tier to one of three nodes. A ZooKeeper box with hatched fill, linked by dashed lines to the routing tier and to each node, holds the table: twelve key ranges (A-ak to Bayes up to Trudeau to Zywiec), their partitions 0 to 11, node (0, 1, 2) and IP addresses 10.20.30.100 to .102.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -9938,7 +10446,15 @@
     ],
     "example": "A ride-booking service marks a driver as assigned, marks the rider as matched and records a deposit. If the deposit write fails, the whole group is aborted and tried again.",
     "rule": "Group related operations in a transaction so that any failure means abort and retry, never a half-done state.",
-    "limits": "Transactions reduce error cases but do not remove every one; an application with very simple access patterns may do without them."
+    "limits": "Transactions reduce error cases but do not remove every one; an application with very simple access patterns may do without them.",
+    "media": [
+     {
+      "id": "ch07/opener",
+      "alt": "Black-and-white engraved map of an island with two peninsulas, labelled with isolation levels and anomalies as landmarks, and a ship at the bottom heading toward distributed transactions.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -10082,7 +10598,15 @@
      }
     ],
     "rule": "ACID atomicity means abort undoes every write of the transaction; it is about faults, not about concurrency.",
-    "limits": "Atomicity says nothing about what other clients see while the transaction runs; that question belongs to isolation."
+    "limits": "Atomicity says nothing about what other clients see while the transaction runs; that question belongs to isolation.",
+    "media": [
+     {
+      "id": "ch07/img-03",
+      "alt": "Timeline with User 1 and Database. User 1 inserts an email row and gets ok. User 1 then sends an update of the mailbox unread counter, but the database shows an explosion mark and an error or timeout is returned to User 1, so the counter is not updated.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -10222,7 +10746,15 @@
      }
     ],
     "rule": "Isolation exists to stop concurrent transactions from interfering; the lost counter increment shows what happens without it.",
-    "limits": "Isolation protects transactions from one another; it does not make a single transaction's logic correct."
+    "limits": "Isolation protects transactions from one another; it does not make a single transaction's logic correct.",
+    "media": [
+     {
+      "id": "ch07/img-01",
+      "alt": "Timeline with User 1, Database and User 2. Each user gets the counter, receives 42, computes 42 + 1 = 43, then sets counter = 43 and gets ok. The two get-and-set round trips overlap in time, so both read 42 before either writes.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -10476,7 +11008,15 @@
      }
     ],
     "rule": "When a value is stored beside its source, change both in one transaction so neither readers nor failures can split them.",
-    "limits": "The example is a mild failure; the same pattern with money is serious."
+    "limits": "The example is a mild failure; the same pattern with money is serious.",
+    "media": [
+     {
+      "id": "ch07/img-02",
+      "alt": "Timeline with User 1, Database and User 2. User 1 inserts an email for recipient 2 and gets ok. User 2 then selects the email (returns Hello, true) and next selects the unread count, which returns 0. Only afterwards does User 1 send the update that adds 1 to the unread counter, and it gets ok.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -11022,7 +11562,15 @@
      }
     ],
     "rule": "Prevent dirty reads so that others never see partial or rolled-back work.",
-    "limits": "Preventing dirty reads does not make successive reads agree; that is a separate problem."
+    "limits": "Preventing dirty reads does not make successive reads agree; that is a separate problem.",
+    "media": [
+     {
+      "id": "ch07/img-04",
+      "alt": "Timeline with User 1, Database and User 2. User 1 sets x = 3, then y = 3, each acknowledged ok, then commits. User 2 runs get x three times: the first two, made before the commit, return 2, and the third, made after the commit, returns 3.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -11061,7 +11609,15 @@
      }
     ],
     "rule": "No dirty writes: a later writer must wait until the earlier transaction commits or aborts.",
-    "limits": "Preventing dirty writes does not protect against all conflicting writes, such as lost updates."
+    "limits": "Preventing dirty writes does not protect against all conflicting writes, such as lost updates.",
+    "media": [
+     {
+      "id": "ch07/img-05",
+      "alt": "Timeline with Alice, Listings, Invoices and Bob. Alice sets the listing buyer to Alice, then the invoice recipient to Alice. Bob updates the listing buyer to Bob between her two writes, then sets the invoice recipient to Bob. Annotations say the listing ends with buyer Bob and the invoice with recipient Alice.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -11240,7 +11796,15 @@
      }
     ],
     "rule": "Read skew: committed values from different moments combine into a state that never existed.",
-    "limits": "Alice would see consistent balances if she reloaded a few seconds later, so the harm is temporary for her case."
+    "limits": "Alice would see consistent balances if she reloaded a few seconds later, so the harm is temporary for her case.",
+    "media": [
+     {
+      "id": "ch07/img-06",
+      "alt": "Timeline with Alice, Account 1, Account 2 and a Transfer. Both balances start at 500. Alice reads account 1 and gets 500. The transfer then adds 100 to account 1 (now 600), subtracts 100 from account 2 (now 400) and commits. Alice reads account 2 and gets 400.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -11415,7 +11979,15 @@
      }
     ],
     "rule": "Each row version carries created_by and deleted_by transaction IDs; an update is a delete plus a create.",
-    "limits": "Dead versions use space until garbage collection can prove no transaction needs them."
+    "limits": "Dead versions use space until garbage collection can prove no transaction needs them.",
+    "media": [
+     {
+      "id": "ch07/img-07",
+      "alt": "Transaction 12 reads two accounts while transaction 13 transfers 100 between them. Account 1 rows show created by 3 with balance 500, then a row deleted by 13 and a new row created by 13 with 600. Account 2 shows 500 deleted by 13 and a new 400 row created by 13. Transaction 12 reads 500 from both accounts.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -11880,7 +12452,15 @@
      }
     ],
     "rule": "Write skew: each transaction is valid alone, but together, on stale snapshots, they break a rule over several records.",
-    "limits": "Run one after the other, the second transaction would have found one doctor and refused; the harm arises only from overlap."
+    "limits": "Run one after the other, the second transaction would have found one doctor and refused; the harm arises only from overlap.",
+    "media": [
+     {
+      "id": "ch07/img-08",
+      "alt": "Two columns of pseudo-code for Alice and Bob. Each begins a transaction, counts doctors with on_call true for shift 1234 (result 2), and if the count is at least 2 sets their own on_call to false, then commits. The doctors table starts with Alice and Bob true, Carol false, and ends with all three false.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -12384,7 +12964,15 @@
      }
     ],
     "rule": "With one transaction at a time, ship the whole transaction as a stored procedure instead of talking statement by statement.",
-    "limits": "Stored procedures help only if the data they need is in memory; otherwise disk waits stall the thread again."
+    "limits": "Stored procedures help only if the data they need is in memory; otherwise disk waits stall the thread again.",
+    "media": [
+     {
+      "id": "ch07/img-09",
+      "alt": "Two timelines. Interactive transaction: Application sends a select count query across a network hop to query processor and storage, gets 2, evaluates an if in its own code, then sends a separate update and gets ok. Stored procedure: Application sends one call to run the procedure, whose select, if and update run inside the database, and gets one ok.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -12948,7 +13536,15 @@
      }
     ],
     "rule": "Record ignored writes during the transaction; at commit, abort if any have become committed.",
-    "limits": "Deferring the check preserves long-running reads from a consistent snapshot."
+    "limits": "Deferring the check preserves long-running reads from a consistent snapshot.",
+    "media": [
+     {
+      "id": "ch07/img-10",
+      "alt": "Timeline with Transaction 42, Database and Transaction 43. Both count on-call doctors for shift 1234 and get 2. Transaction 42 sets Alice off call and commits. Transaction 43 then reads again, sees Alice still on call, updates Bob and commits, but is aborted. A table shows Alice's old row created by 1 and deleted by 42, new row created by 42.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -12983,7 +13579,15 @@
      }
     ],
     "rule": "Readers leave tripwires on the data they read; a later writer notifies them, and the reader aborts if the writer committed first.",
-    "limits": "A notified transaction aborts only if the conflicting write commits before it does."
+    "limits": "A notified transaction aborts only if the conflicting write commits before it does.",
+    "media": [
+     {
+      "id": "ch07/img-11",
+      "alt": "Same timeline of transactions 42 and 43 as the previous figure, each reading doctors for shift 1234, then updating, 42 committing first and 43 aborted. A table of index-range locks lists key range 1234 as read by transaction 42 and read by transaction 43, with a note that 42's update affects 43's read.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -13202,7 +13806,15 @@
      }
     ],
     "rule": "A single computer is deterministic and either fully works or fully breaks, because designers prefer a crash to a wrong result.",
-    "limits": "Buggy software can still look flaky on one machine, and the guarantee ends once several machines talk over a network."
+    "limits": "Buggy software can still look flaky on one machine, and the guarantee ends once several machines talk over a network.",
+    "media": [
+     {
+      "id": "ch08/opener",
+      "alt": "Engraved drawing of a huge sea monster with long tentacles wrapped around a sailing ship, with a stormy wind-cloud blowing from the left; the picture is turned sideways.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -13517,7 +14129,15 @@
      }
     ],
     "rule": "A missing response can come from the request, from the node, or from the response on its way back.",
-    "limits": "The list names common causes; it does not give you a way to tell them apart."
+    "limits": "The list names common causes; it does not give you a way to tell them apart.",
+    "media": [
+     {
+      "id": "ch08/img-01",
+      "alt": "Three timelines with Client, Network and Service, each ending in question marks as the client waits. (a) The request is lost in the network, shown as an X. (b) The request reaches a service marked node unresponsive and is lost. (c) The service replies ok, but the response is lost in the network.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -14050,7 +14670,15 @@
      }
     ],
     "rule": "Variable packet delay is mostly queueing: at switches, at busy receivers, at paused virtual machines, and at senders.",
-    "limits": "A full switch queue drops packets, so some delay shows up as retransmission rather than waiting."
+    "limits": "A full switch queue drops packets, so some delay shows up as retransmission rather than waiting.",
+    "media": [
+     {
+      "id": "ch08/img-02",
+      "alt": "A network switch with four input ports on the left, each carrying a steady stream of packets in a different shade. Inside, lines cross the switch fabric to output queues. Output port 3 shows a long mixed queue of all shades, while ports 1, 2 and 4 carry few packets.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -14755,7 +15383,15 @@
      }
     ],
     "rule": "LWW trusts timestamps, so a node with a lagging clock can lose writes that really happened later.",
-    "limits": "Clock skew in the example is under 3 ms, better than you can expect in practice, and it still misorders the writes."
+    "limits": "Clock skew in the example is under 3 ms, better than you can expect in practice, and it still misorders the writes.",
+    "media": [
+     {
+      "id": "ch08/img-03",
+      "alt": "Timeline with Client A, Nodes 1, 2, 3 and Client B, each node showing clock readings. Client A sets x = 1 on node 1 (clock 42.004). Client B then increments x on node 3 (clock 42.003). Node 1's write is replicated with ts 42.004, node 3's x = 2 with ts 42.003, and both arrive at node 2.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -15403,7 +16039,15 @@
      }
     ],
     "rule": "A lease check inside the client is not enough, because the client can be paused after checking.",
-    "limits": "The bug is not theoretical: HBase used to have this problem."
+    "limits": "The bug is not theoretical: HBase used to have this problem.",
+    "media": [
+     {
+      "id": "ch08/img-04",
+      "alt": "Timeline with Lock service, Client 1, Client 2 and Storage. Client 1 gets a lease and a long stop-the-world GC pause begins. The lease expires, client 2 gets the lease and writes data to storage, which returns ok. Client 1 wakes up and writes data, and the write ends in an explosion mark at storage.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -15442,7 +16086,15 @@
      }
     ],
     "rule": "Make the resource reject writes whose fencing token is older than one it has already seen.",
-    "limits": "Fencing stops mistaken nodes; a node that deliberately sends a fake token is a different problem."
+    "limits": "Fencing stops mistaken nodes; a node that deliberately sends a fake token is a different problem.",
+    "media": [
+     {
+      "id": "ch08/img-05",
+      "alt": "Same lock service timeline, now with fencing tokens. Client 1 gets lease with token 33 and pauses in GC. Client 2 gets token 34 and writes data with token 34, which storage accepts. Client 1 wakes and writes with token 33, and storage rejects it as an old token.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -16045,7 +16697,15 @@
      }
     ],
     "rule": "Implement a guarantee once, below the applications, and let them rely on it instead of coping with faults one by one.",
-    "limits": "A guarantee hides only the faults it covers. In some situations a system can tolerate faults and keep working, and in others that is impossible, so the limits must be known."
+    "limits": "A guarantee hides only the faults it covers. In some situations a system can tolerate faults and keep working, and in others that is impossible, so the limits must be known.",
+    "media": [
+     {
+      "id": "ch09/opener",
+      "alt": "Pen-and-ink map of an island, drawn sideways, titled Wrecks of Homegrown Consensus Algorithms. A smoking volcano, Mount Consensus, sits in the middle, surrounded by regions labelled linearizability, total order broadcast, distributed transactions and global constraints.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -16259,7 +16919,15 @@
      }
     ],
     "rule": "A request that starts after another has finished must see at least as recent a state as the first one did.",
-    "limits": "Truly simultaneous requests carry no such expectation; the guarantee binds requests that are ordered in real time."
+    "limits": "Truly simultaneous requests carry no such expectation; the guarantee binds requests that are ordered in real time.",
+    "media": [
+     {
+      "id": "ch09/img-01",
+      "alt": "Timeline with six rows: Referee, Leader, Follower 1, Follower 2, Alice, Bob. Referee sends an insert of the final score (Germany 1, Argentina 0) to Leader, which replies ok and forwards the insert to Follower 1 (arrives early) and Follower 2 (arrives late). Alice's select reads Follower 1 and returns the score, and she says Germany has won. Bob's select starts after Alice's finishes, reads Follower 2 before the insert arrives there, and he says the website shows the match still playing.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -16330,7 +16998,15 @@
      }
     ],
     "rule": "A read that ends before a write starts sees the old value, one that starts after the write ends sees the new value, and an overlapping read may see either.",
-    "limits": "These three cases alone permit the value to flip between old and new during a write, which a single copy would not do."
+    "limits": "These three cases alone permit the value to flip between old and new during a write, which a single copy would not do.",
+    "media": [
+     {
+      "id": "ch09/img-02",
+      "alt": "Timeline for clients A, B and C on a register x. C has one long bar, write(x, 1), ending with ok. A makes three reads: the first, before the write, returns 0; the second, overlapping the write, returns 0 or 1; the third starts after the write ends, with an arrow from the write's end, and returns 1. B makes two reads, both overlapping the write, each labelled returns 0 or 1.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -16365,7 +17041,15 @@
      }
     ],
     "rule": "Once a read has returned the new value, every read that starts after it must return the new value too.",
-    "limits": "The constraint binds reads ordered in real time. Two reads that overlap each other are still free to differ."
+    "limits": "The constraint binds reads ordered in real time. Two reads that overlap each other are still free to differ.",
+    "media": [
+     {
+      "id": "ch09/img-03",
+      "alt": "Timeline for clients A, B and C on register x, with C's long write(x, 1) ending in ok. A reads three times, returning 0, then 1, then 1. B reads twice: the first returns 0 and ends before A's second read begins; the second returns 1. An arrow runs from A's second read, which returned 1, to B's second read, which starts after A's second read ended.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -16400,7 +17084,15 @@
      }
     ],
     "rule": "An execution is linearizable if each operation can be given one point inside its interval so that the points form a valid sequence moving forward in time.",
-    "limits": "The markers only exist in the analysis. The database does not tell clients when each operation took effect."
+    "limits": "The markers only exist in the analysis. The database does not tell clients when each operation took effect.",
+    "media": [
+     {
+      "id": "ch09/img-04",
+      "alt": "Timeline for clients A, B, C, D and a Database line with marker points x=0, x=1, x=2, x=4. Operations: D write(x,0) ok; A write(x,1) ok; B read returns 1; C reads 1 then 2; B cas(x,1,2) ok; C cas(x,2,4) ok; D cas(x,0,3) returns error; A read returns 4. Grey lines join each operation to a database marker. B's last read, shaded with a warning sign, starts after A's read of 4 ended and returns 2.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -16858,7 +17550,15 @@
      }
     ],
     "rule": "If the store is not linearizable, the message to the worker can arrive before the data it points to.",
-    "limits": "A linearizable store removes the race, but only the two channels in this flow are covered; other paths need their own check."
+    "limits": "A linearizable store removes the race, but only the two channels in this flow are covered; other paths need their own check.",
+    "media": [
+     {
+      "id": "ch09/img-05",
+      "alt": "Diagram with a user, Web server, File storage, Message queue and Image resizer. Numbered arrows: 1 user uploads image to web server; 2 web server stores full-size image in file storage; 3 web server sends message to the queue; 4 queue delivers message to image resizer; 5 resizer fetches full-size image from file storage; 6 resizer stores resized image in file storage.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -17139,7 +17839,15 @@
      }
     ],
     "rule": "Quorum overlap does not stop a later read from returning an older value than an earlier read, because the write reaches replicas at different times.",
-    "limits": "The race needs a write in progress and variable delays. Between writes, with every replica updated, the quorum reads agree."
+    "limits": "The race needs a write in progress and variable delays. Between writes, with every replica updated, the quorum reads agree.",
+    "media": [
+     {
+      "id": "ch09/img-06",
+      "alt": "Timeline with Writer, Replica 1, 2 and 3, Reader A and Reader B. Writer sends set x = 1 to all three replicas; Replica 3 receives it first and replies ok, Replicas 1 and 2 receive it later. Reader A's get x queries Replica 3, which returns 1, and Replica 2, which returns 0; A gets 1 and 0. Reader B's get x starts after A finishes, queries Replicas 1 and 2 before the write arrives; both return 0.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -17210,7 +17918,15 @@
      }
     ],
     "rule": "During a datacenter split, multi-leader keeps working but may be stale, while single-leader makes cut-off clients wait or fail if they need linearizable operations.",
-    "limits": "The loss is only for clients cut off from the leader and who need linearizable operations. Clients in the leader's datacenter carry on."
+    "limits": "The loss is only for clients cut off from the leader and who need linearizable operations. Clients in the leader's datacenter carry on.",
+    "media": [
+     {
+      "id": "ch09/img-07",
+      "alt": "Two boxes, Datacenter 1 on the left and Datacenter 2 on the right, each holding an Application with an arrow to its DB. A curved replication connection between the two DBs is broken by a mark labelled network interruption (network partition). Below, client figures send arrows to the application in their own datacenter: four on the left, three on the right.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -18090,7 +18806,15 @@
      }
     ],
     "rule": "Pass the highest counter you have seen along with every request, and move a node's counter forward when it sees a larger one.",
-    "limits": "The rule gives causal order only when the counter travels with every operation. Operations that leave the system without it break the guarantee."
+    "limits": "The rule gives causal order only when the counter travels with every operation. Operations that leave the system without it break the guarantee.",
+    "media": [
+     {
+      "id": "ch09/img-08",
+      "alt": "Timeline with Client A, Node 1, Node 2, Client B. A writes with max = 0 to Node 1 (counter c = 1) and receives (1, 1). B writes to Node 2 four times with max = 0, 1, 2, 3, counters c = 1 to 4, replies (1, 2), (2, 2), (3, 2), (4, 2). A writes max = 1 to Node 2 (c = 5), gets (5, 2); then writes max = 5 to Node 1 (c = 6), gets (6, 1). B writes max = 4 to Node 2 (c = 6), gets (6, 2).",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -18836,7 +19560,15 @@
      }
     ],
     "rule": "Phase 1 asks every node whether it can commit, and phase 2 commits only if all said yes.",
-    "limits": "The coordinator's decision, once taken, is what phase 2 carries out; it is not a fresh vote."
+    "limits": "The coordinator's decision, once taken, is what phase 2 carries out; it is not a fresh vote.",
+    "media": [
+     {
+      "id": "ch09/img-09",
+      "alt": "Timeline with Coordinator, Database 1 and Database 2. Coordinator sends write data to each database, each replying ok. In phase 1 it sends prepare to both and each replies yes. In phase 2 it sends commit to both and each replies ok. A grey bar on each database, running from its write data until after commit is processed, marks locks held by the transaction.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -19013,7 +19745,15 @@
      }
     ],
     "rule": "An in-doubt participant must wait, because neither committing nor aborting alone is safe.",
-    "limits": "Waiting is the only safe action; any guess risks disagreeing with another participant."
+    "limits": "Waiting is the only safe action; any guess risks disagreeing with another participant.",
+    "media": [
+     {
+      "id": "ch09/img-10",
+      "alt": "Timeline with Coordinator, Database 1 and Database 2. Coordinator sends write data (both ok), then prepare in phase 1 (both reply yes). In phase 2 the coordinator crashes, shown by an explosion and a grey crashed bar. The commit request reaches Database 2, which replies ok; the commit to Database 1 never arrives, and its line is labelled stuck in prepared state.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -20225,7 +20965,15 @@
      }
     ],
     "rule": "Match the design to who is waiting: services answer fast, batch jobs maximise throughput, stream jobs sit in between.",
-    "limits": "The three types are points on a range, not sealed boxes: the author places stream processing between online and offline, and one system can contain all three."
+    "limits": "The three types are points on a range, not sealed boxes: the author places stream processing between online and offline, and one system can contain all three.",
+    "media": [
+     {
+      "id": "ch10/opener",
+      "alt": "Pen-and-ink map of an island in the Sea of Derived Data, with regions labelled distributed filesystems, dataflow engines, MPP databases, iterative processing and search indexes. Ships head toward other chapters.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -21113,7 +21861,15 @@
      }
     ],
     "rule": "The shuffle: mappers write sorted partitions to local disk, reducers download theirs and merge.",
-    "limits": "Despite the name there is no randomness in the shuffle; and the work it costs is the reason map-side joins and dataflow engines try to avoid it."
+    "limits": "Despite the name there is no randomness in the shuffle; and the work it costs is the reason map-side joins and dataflow engines try to avoid it.",
+    "media": [
+     {
+      "id": "ch10/img-01",
+      "alt": "Three map tasks on the left, each with an input file (m1, m2, m3 from the HDFS input directory), a Mapper and three sorted output files named by map and reduce number, such as m1,r1 m1,r2 m1,r3. Arrows carry each file to the reduce task with its r number. Each of three reduce tasks gets three files, merges them, runs a Reducer and writes r1, r2 or r3 to the HDFS output directory.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -21253,7 +22009,15 @@
      }
     ],
     "rule": "Per-record network lookups cap a batch job at the speed of round trips; bring the data to the job instead.",
-    "limits": "For a handful of records a remote lookup is fine; the argument bites when the number of lookups matches the size of a big dataset."
+    "limits": "For a handful of records a remote lookup is fine; the argument bites when the number of lookups matches the size of a big dataset.",
+    "media": [
+     {
+      "id": "ch10/img-02",
+      "alt": "Two lists with arrows. Left, User activity events: lines such as user 105 clicked button, user 296 viewed a profile, user 101 posted a response. Right, User database, a table with columns user_id, email, date_of_birth and rows 100 to 105. Arrows link the user 105 event and the user 101 event to the matching table rows.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -21324,7 +22088,15 @@
      }
     ],
     "rule": "Key both inputs by the join key; the shuffle puts matching records in the same reducer call.",
-    "limits": "The cost of sorting and moving everything is what map-side joins try to avoid when the inputs have a known layout."
+    "limits": "The cost of sorting and moving everything is what map-side joins try to avoid when the inputs have a known layout.",
+    "media": [
+     {
+      "id": "ch10/img-03",
+      "alt": "Two mapper pipelines feed two reducer partitions. The user activity mapper reads events (user 104 loaded /x, user 173 loaded /y, user 104 loaded /z) and emits 104 with url /x, 104 with url /z, 173 with url /y. The user database mapper reads records of users 103 and 104 and emits 104 with dob 1989 and 103 with dob 1947. Reducer partition 1 (even-numbered user IDs) receives the 104 records and outputs url and dob pairs; partition 2 (odd-numbered IDs) takes 173 and 103.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -23419,7 +24191,15 @@
      }
     ],
     "rule": "Unbounded input forces a choice between artificial time slices (batch) and continuous processing of each event (streams).",
-    "limits": "Our reading: where a day's delay is acceptable, a daily batch can remain the simpler choice; streams are not automatically better."
+    "limits": "Our reading: where a day's delay is acceptable, a daily batch can remain the simpler choice; streams are not automatically better.",
+    "media": [
+     {
+      "id": "ch11/opener",
+      "alt": "Engraved fantasy map of a land of stream processing: message queues and sensors in the northeast, a forest of logs, mountains of state, a sands of time region, and a great event stream river, with a ship sailing toward batch processing.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -23699,7 +24479,15 @@
      }
     ],
     "rule": "Load balancing splits the messages among consumers; fan-out gives every message to every consumer.",
-    "limits": "Fan-out gives every consumer the whole stream, so it adds no parallelism; load balancing hides part of the stream from each consumer."
+    "limits": "Fan-out gives every consumer the whole stream, so it adds no parallelism; load balancing hides part of the stream from each consumer.",
+    "media": [
+     {
+      "id": "ch11/img-01",
+      "alt": "Two timelines, (a) load balancing and (b) fan-out, with lanes Producer 1, Producer 2, Broker, Consumer 1 and Consumer 2. In both, producers send messages m1 to m5 to the broker. In (a) m1 and m3 go to Consumer 2 while m2 and m4 go to Consumer 1. In (b) every message m1 to m4 goes to both consumers.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -23769,7 +24557,15 @@
      }
     ],
     "rule": "Load balancing together with redelivery inevitably reorders messages; use a queue per consumer if order matters.",
-    "limits": "A separate queue per consumer avoids the problem but gives up the parallel consumption that load balancing was for."
+    "limits": "A separate queue per consumer avoids the problem but gives up the parallel consumption that load balancing was for.",
+    "media": [
+     {
+      "id": "ch11/img-02",
+      "alt": "Timeline with lanes Producer 1, Producer 2, Broker, Consumer 1 and Consumer 2. Consumer 1 processes m2 and returns an ack, then m4. Consumer 2 processes m1 with an ack, receives m3 and crashes, shown as a burst followed by a grey crashed bar. The broker redelivers m3 to Consumer 1 after m4, and m5 follows.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -23840,7 +24636,15 @@
      }
     ],
     "rule": "A log-based broker is a partitioned append-only log: order holds inside a partition, not across partitions.",
-    "limits": "A single partition is bounded by what one machine can handle, which is why the log is partitioned in the first place."
+    "limits": "A single partition is bounded by what one machine can handle, which is why the log is partitioned in the first place.",
+    "media": [
+     {
+      "id": "ch11/img-03",
+      "alt": "Two topics drawn as rows of numbered boxes. Topic A has partition 0 (1 to 10) and partition 1 (1 to 8); topic B has partition 0 (1 to 4), partition 1 (1 to 7) and partition 2 (1 to 12). Two producer clients append at dashed empty slots at partition ends. A consumer group has two clients: one reads B partitions 0 and 1 with offsets B.0 = 4 and B.1 = 5, the other reads B partition 2 with offset B.2 = 9.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -24088,7 +24892,15 @@
      }
     ],
     "rule": "Replicas that apply the same deterministic writes in the same order end in the same state.",
-    "limits": "The principle covers one leader whose order every replica follows; independent systems with no shared order can still diverge."
+    "limits": "The principle covers one leader whose order every replica follows; independent systems with no shared order can still diverge.",
+    "media": [
+     {
+      "id": "ch11/img-05",
+      "alt": "Diagram: Client 1 sets X = A and Client 2 sets X = B on a system of record database. Change data capture appends these changes to a log of data changes shown as boxes with X = A then X = B. Two log consumers, a search index and a data warehouse, each read the log and apply the changes in order.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -24158,7 +24970,15 @@
      }
     ],
     "rule": "Dual writes can apply two updates in different orders in two systems, leaving them different for good.",
-    "limits": "A single leader that fixes the order of writes avoids this, but two independent systems each with a leader do not follow one another."
+    "limits": "A single leader that fixes the order of writes avoids this, but two independent systems each with a leader do not follow one another.",
+    "media": [
+     {
+      "id": "ch11/img-04",
+      "alt": "Timeline with lanes Client 1, Database, Search index and Client 2. Client 1 sends set X = A and Client 2 sends set X = B to each store, each getting ok. The database receives A first and then B, ending with final value X = B. The search index receives B first and then A, ending with final value X = A.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -24651,7 +25471,15 @@
      }
     ],
     "rule": "Application state is what you get by integrating an event stream over time; the change stream is the derivative of the state.",
-    "limits": "The integration analogy has limits: for instance the second derivative of state does not seem to be meaningful."
+    "limits": "The integration analogy has limits: for instance the second derivative of state does not seem to be meaningful.",
+    "media": [
+     {
+      "id": "ch11/img-06",
+      "alt": "Two mathematical formulas side by side. On the left, state(now) equals the integral from t = 0 to now of stream(t) dt. On the right, stream(t) equals the derivative d state(t) over dt.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -25285,7 +26113,15 @@
      }
     ],
     "rule": "Event time says when something happened, processing time says when it was handled; mixing them produces artefacts such as false spikes.",
-    "limits": "Windowing by event time brings its own problem: you cannot be sure when a window is complete."
+    "limits": "Windowing by event time brings its own problem: you cannot be sure when a window is complete.",
+    "media": [
+     {
+      "id": "ch11/img-07",
+      "alt": "Four stacked panels over time. A web server row of request boxes feeds a stream processor row, which has a grey restarting gap followed by a dense burst of boxes. The processing-time rate graph falls from 10 to 0 during the restart then jumps above 10 and decays. The actual request rate line stays flat at 10 throughout.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -26207,7 +27043,15 @@
      }
     ],
     "rule": "Pick each tool for the access pattern it was built for, and expect to combine several when one dataset serves different uses.",
-    "limits": "If one product covers every requirement you have, the chapter says to use it rather than compose your own. Combination is a response to a real gap, not a goal."
+    "limits": "If one product covers every requirement you have, the chapter says to use it rather than compose your own. Combination is a response to a real gap, not a goal.",
+    "media": [
+     {
+      "id": "ch12/opener",
+      "alt": "Engraved fantasy map of a coastline on the Sea of Derived Data with the Realm of Dataflow, data integration mountains, two dragons marked security and privacy, and ships heading to chapters 10 and 11.",
+      "role": "decorative",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -27387,7 +28231,15 @@
      }
     ],
     "rule": "Every derived dataset marks a boundary: work before it is done on write, work after it is done on read.",
-    "limits": "The boundary is a design choice, not a law. Where it sits can differ by use, as the next idea shows."
+    "limits": "The boundary is a design choice, not a law. Where it sits can differ by use, as the next idea shows.",
+    "media": [
+     {
+      "id": "ch12/img-01",
+      "alt": "Left-to-right flow. A user sends update document to an application server, then new document version goes to linguistic analysis, then terms appearing in document go to the search index; this is bracketed as the write path. The user's search query goes to an application server, a search query executor with expanded query, and back and forth with the search index via search terms and posting lists; bracketed as the read path.",
+      "role": "figure",
+      "type": "image/webp"
+     }
+    ]
    }
   },
   {
@@ -147078,9 +147930,1957 @@
    "explain": "Coordination and constraints reduce inconsistency apologies but can lower performance and availability, which raises outage apologies.",
    "rule": "Balance inconsistency apologies against outage apologies.",
    "teaches": "Coordination reduces the apologies owed for inconsistencies but can reduce performance and availability and so increase the apologies owed for outages; the aim is the sweet spot with neither too many inconsistencies nor too many availability problems."
+  },
+  {
+   "id": "c01-composite-data-system-6",
+   "unit": "Chapter 1",
+   "unitTitle": "Reliable, Scalable, and Maintainable Applications",
+   "section": "Thinking About Data Systems",
+   "concept": "c01-composite-data-system",
+   "rung": 6,
+   "role": "predict",
+   "kind": "order",
+   "q": "In the diagram, a client writes a record through the API. Put the steps in the order the arrows show.",
+   "items": [
+    "The request enters through the API to application code",
+    "Application code sends the write to the primary database",
+    "Other application code captures the changes to data",
+    "The cache is invalidated or updated and the search index gets updates"
+   ],
+   "explain": "The diagram shows the write going to the primary database first; a separate piece of application code then captures the change and pushes it on to the cache and the full-text index.",
+   "rule": "Application code keeps caches and indexes in sync with the main database.",
+   "media": [
+    {
+     "id": "ch01/img-01",
+     "alt": "Diagram of a combined data system inside a dashed boundary. A client calls through an API into application code. Application code reads an in-memory cache, sends cache misses and writes to a primary database, sends search requests to a full-text index, and sends asynchronous tasks to a message queue. Other application code captures changes from the primary database, then invalidates or updates the cache and applies updates to the search index. The queue feeds further application code that sends email to the outside world.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c01-twitter-fanout-7",
+   "unit": "Chapter 1",
+   "unitTitle": "Reliable, Scalable, and Maintainable Applications",
+   "section": "Describing Load",
+   "concept": "c01-twitter-fanout",
+   "rung": 7,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, a user requests the home timeline. Which work does that read perform?",
+   "options": [
+    "It reads only that user's own prepared list of tweets",
+    "It finds the accounts the user follows and merges their tweets",
+    "It copies the new tweet into each follower's list",
+    "It scans the all-tweets list for the followed senders"
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Right: in the diagram each recipient has a ready list, and the read arrow points at it alone.",
+    "This describes approach 1, where reads do the lookup and merge; the diagram moves that work to post time.",
+    "Copying into follower lists happens when a tweet is posted, shown on the left, not on a read.",
+    "Scanning the global list is how reads work in approach 1; here the reads go to per-recipient lists."
+   ],
+   "explain": "In the diagram the home-timeline read arrows go to each recipient's own list, so a read is cheap. The heavy copying happens at post time.",
+   "rule": "Fan-out on write moves work from reads to posts.",
+   "media": [
+    {
+     "id": "ch01/img-03",
+     "alt": "Fan-out pipeline: a user posts a tweet at 4.6k writes per second into an All tweets list. Arrows fan out from it to separate timeline lists for recipients 1, 2 and 3, labelled up to 31M followers per user and 345k writes per second. At the right, users get their home timeline from their own list, labelled 300k reads per second.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c01-percentiles-7",
+   "unit": "Chapter 1",
+   "unitTitle": "Reliable, Scalable, and Maintainable Applications",
+   "section": "Describing Performance",
+   "concept": "c01-percentiles",
+   "rung": 7,
+   "role": "predict",
+   "kind": "tf",
+   "q": "True or false: In the diagram, the mean line sits above the median line because a few very slow requests pull the mean upward.",
+   "answer": true,
+   "explain": "A few tall bars reach the 95th and 99th percentile levels. They raise the mean but barely change the median, which is the middle of the sorted times.",
+   "rule": "Outliers pull the mean up; the median is not moved by them.",
+   "media": [
+    {
+     "id": "ch01/img-05",
+     "alt": "Bar chart of response time for about 100 requests along the horizontal axis, most bars short and a few tall. Dotted horizontal lines mark the median (p50) at the lowest level, the mean (average) slightly above it, then the 95th percentile and the 99th percentile near the top. Only a few bars reach above the 95th line.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c01-tail-amplification-aggregation-7",
+   "unit": "Chapter 1",
+   "unitTitle": "Reliable, Scalable, and Maintainable Applications",
+   "section": "Describing Performance",
+   "concept": "c01-tail-amplification-aggregation",
+   "rung": 7,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, backend 6 speeds up from 487 ms to 90 ms and nothing else changes. How long does the end-user request take now?",
+   "options": [
+    "About 90 ms, because the changed call now sets the pace",
+    "About 143 ms, set by the slowest of the seven calls",
+    "About 723 ms, because the seven call times add together",
+    "About 103 ms, the average of the seven call times"
+   ],
+   "answer": 1,
+   "optionExplain": [
+    "The changed call is now fast, so it no longer sets the pace; the request waits for the slowest call.",
+    "Right: the calls run in parallel, so the request ends when the slowest, now backend 4 at 143 ms, returns.",
+    "Adding times fits calls made one after another; the diagram shows them in parallel.",
+    "An average hides the wait: the user cannot be served until the slowest call returns."
+   ],
+   "explain": "The end-user request in the diagram lasts until the slowest parallel call finishes. After the change that is 143 ms.",
+   "rule": "A request that fans out waits for its slowest call.",
+   "media": [
+    {
+     "id": "ch01/img-06",
+     "alt": "A web application sends one request each to seven backends, each with its own database. Response times shown are 92, 76, 103, 143, 86, 487 and 133 ms. At top left, a bar for the end-user request spans from the start to the end of the longest bar, 487 ms.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c02-one-to-many-representations-6",
+   "unit": "Chapter 2",
+   "unitTitle": "Data Models and Query Languages",
+   "section": "The Object-Relational Mismatch",
+   "concept": "c02-one-to-many-representations",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram's relational schema, Bill adds a third job. What changes in the tables?",
+   "options": [
+    "His users row gains a third job column holding the title",
+    "A row is added to the regions table pointing at his user_id",
+    "A row is added to the positions table carrying his user_id 251",
+    "The industries table gains a row, one for each new organization"
+   ],
+   "answer": 2,
+   "optionExplain": [
+    "Columns hold one-per-user facts; a repeating job cannot be a new column for each person.",
+    "The regions table lists places and holds no user_id, so it records nothing about jobs.",
+    "Right: each job is a row in positions with user_id 251 as a foreign key to the users table.",
+    "The industries table lists industry names; organizations are stored in the positions rows."
+   ],
+   "explain": "One-to-many data lives in separate tables with a foreign key. Each job is a new positions row whose user_id is 251.",
+   "rule": "Repeating items become rows in a child table with a foreign key.",
+   "media": [
+    {
+     "id": "ch02/img-01",
+     "alt": "A LinkedIn profile for Bill Gates on the left and, on the right, its relational tables. The users table row 251 has region_id us:91 and industry_id 131 pointing to the regions and industries tables. The positions, education and contact_info tables each have several rows carrying user_id 251, one row per job, school or contact.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c02-graph-flexibility-6",
+   "unit": "Chapter 2",
+   "unitTitle": "Data Models and Query Languages",
+   "section": "Property Graphs",
+   "concept": "c02-graph-flexibility",
+   "rung": 6,
+   "role": "apply",
+   "kind": "fill",
+   "q": "In the diagram, going from the Idaho box up to the North America box crosses ____ within edges.",
+   "accept": [
+    "2",
+    "two"
+   ],
+   "explain": "Idaho is within United States, and United States is within North America, so two within edges are crossed.",
+   "rule": "Graph queries follow chains of edges of varying length.",
+   "media": [
+    {
+     "id": "ch02/img-05",
+     "alt": "Graph of boxes with properties. Lucy and Alain, type person, are linked by married. Lucy is born_in Idaho (state) and lives_in London (city). Alain lives_in London and is born_in Beaune. Within arrows chain Idaho to United States to North America, London to England to United Kingdom to Europe, and Beaune to Cote-d'Or to Burgundy to France to Europe.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c02-datalog-6",
+   "unit": "Chapter 2",
+   "unitTitle": "Data Models and Query Languages",
+   "section": "The Foundation: Datalog",
+   "concept": "c02-datalog",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, which row is new after rule 2 is applied the second time?",
+   "options": [
+    "usa with North America",
+    "idaho with United States",
+    "namerica with North America",
+    "idaho with North America"
+   ],
+   "answer": 3,
+   "optionExplain": [
+    "This row was already added the first time rule 2 was applied.",
+    "This row is shaded in the middle table, so it came from the first application.",
+    "Rule 1 created this row, and it appears in the first table.",
+    "Right: the second pass joins idaho's parent usa with usa's new North America row."
+   ],
+   "explain": "The third table gains only idaho with North America. It is derived from within(idaho, usa) and the row usa with North America from the first pass.",
+   "rule": "Rules are applied repeatedly until no new facts appear.",
+   "media": [
+    {
+     "id": "ch02/img-06",
+     "alt": "Three tables named within_recursive with columns Location and Name. After rule 1 there are three rows: namerica North America, usa United States, idaho Idaho. After rule 2 once, usa North America and idaho United States are added. After rule 2 twice, idaho North America is added. Dashed lines link rows between tables.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-hash-index-memory-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "Hash Indexes",
+   "concept": "c03-hash-index-memory",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, a new record for key 42 is appended at the end of the file. What happens to the hash map and the file?",
+   "options": [
+    "Both map offsets are recomputed because the file grew, so key 123456 also receives a new offset.",
+    "Only the entry for key 42 changes to the new record's offset; the old record stays in the file.",
+    "Only the entry for key 42 changes, and the old record at offset 64 is erased in place.",
+    "The map gains a second entry for key 42, so offset 64 and the new offset both remain."
+   ],
+   "answer": 1,
+   "explain": "The map keeps one offset per key and is updated to the newest record. The file is only appended to, so the old record stays until compaction removes it.",
+   "optionExplain": [
+    "Tempting because the file grew, but appending does not move earlier records, so other offsets stay valid.",
+    "Right: one map entry per key points to the newest record, and old records are left alone in the log.",
+    "Tempting as an update in place, but a log-structured file is append-only and never overwrites old bytes.",
+    "Plausible as keeping history, but a hash map holds a single value per key, which is the latest offset."
+   ],
+   "rule": "A hash index points each key at its newest record; old records wait for compaction.",
+   "media": [
+    {
+     "id": "ch03/img-01",
+     "alt": "Diagram: an in-memory hash map with two rows, key 123456 at byte offset 0 and key 42 at byte offset 64, each with an arrow down to a log-structured file on disk drawn as one box per byte. The file holds the text of two records, one per key: JSON documents for London and San Francisco, each ending in a newline. Arrows land on the first byte of each record.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-segments-compaction-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "Hash Indexes",
+   "concept": "c03-segments-compaction",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, yawn: 511 occurs only in segment 1 and scratch: 252 only in segment 2. What does the merged segment do with them?",
+   "options": [
+    "It drops both entries, because keys that are not repeated across segments count as stale data.",
+    "It keeps only scratch, because merging prefers whatever the newer segment contributes to the result.",
+    "It keeps both, because only older values of a repeated key are thrown away during a merge.",
+    "It keeps both but marks them as deletion markers until the next compaction decides their fate."
+   ],
+   "answer": 2,
+   "explain": "Merging discards only values superseded by a newer value for the same key. A key found in a single segment has no newer value, so its entry survives.",
+   "optionExplain": [
+    "Plausible if merging were pruning by age, but it only removes duplicates, not unique keys.",
+    "Tempting because newer wins for repeated keys, but yawn has no newer competitor, so it stays too.",
+    "Right: an entry is dropped only when a more recent value for the same key exists.",
+    "Confuses merging with deletion; deletion markers are a separate mechanism written by delete requests."
+   ],
+   "rule": "Merging keeps the latest value of every key and discards only superseded ones.",
+   "media": [
+    {
+     "id": "ch03/img-03",
+     "alt": "Diagram: data file segment 1 (mew 1078 up to 1082, purr 2103 to 2108, yawn 511) and data file segment 2 (purr 2109 to 2114, mew 1083 to 1087, scratch 252) both feed arrows into a compaction and merging process. It outputs merged segments 1 and 2: yawn: 511, scratch: 252, mew: 1087, purr: 2114.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-sparse-index-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "SSTables and LSM-Trees",
+   "concept": "c03-sparse-index",
+   "rung": 6,
+   "role": "apply",
+   "kind": "multi",
+   "q": "In the diagram, which lookups would start scanning the segment at offset 102134, the handbag entry?",
+   "options": [
+    "hammer",
+    "handbag",
+    "handkerchief",
+    "handsome",
+    "handstand"
+   ],
+   "answers": [
+    1,
+    2
+   ],
+   "explain": "Keys are sorted, so a lookup starts at the nearest index entry at or before the key. Handbag and handkerchief fall from handbag up to before handsome; hammer starts at hammock and the others at handsome.",
+   "optionExplain": [
+    "Hammer sorts between hammock and handbag, so its scan starts at the hammock offset instead.",
+    "Right: handbag has its own index entry, so scanning starts exactly there.",
+    "Right: handkerchief sorts after handbag and before handsome, so the handbag entry is the nearest earlier one.",
+    "Handsome has its own index entry at 104667, so its scan starts there rather than at handbag.",
+    "Handstand sorts after handsome, so its nearest earlier index entry is handsome, not handbag."
+   ],
+   "rule": "With a sparse index, start at the nearest earlier indexed key and scan forward.",
+   "media": [
+    {
+     "id": "ch03/img-05",
+     "alt": "Diagram: a sparse in-memory index with rows hammock 100491, handbag 102134, handsome 104667 and hangout 106812, with arrows into a sorted segment file (SSTable) on disk. Between handbag and handsome lies a shaded compressible block of sorted entries from handbag to handprinted; handsome starts the next block.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-btree-split-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "B-Trees",
+   "concept": "c03-btree-split",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, key 334 is added to a leaf with no spare space. What changes in the parent page?",
+   "options": [
+    "Nothing changes, because the full leaf grows longer to hold the extra key.",
+    "Key 334 becomes a boundary key, replacing 333 so that the lower range starts there.",
+    "The parent page itself is split first, so the leaf can keep its current layout.",
+    "A new boundary key 337 appears, with one reference to each of the two halves."
+   ],
+   "answer": 3,
+   "explain": "The leaf is split into two pages and the parent records the new boundary key between them. The parent had spare space, so it does not need to split.",
+   "optionExplain": [
+    "Pages have a fixed size, so a full leaf cannot grow; it has to be split instead.",
+    "Boundary keys come from the split point of the leaf, not from the key being inserted.",
+    "The parent only splits when it too runs out of room; here the diagram shows it has spare space.",
+    "Right: the split adds a boundary key and a second child reference to the parent page."
+   ],
+   "rule": "A full page splits in two and the parent gains a boundary key.",
+   "media": [
+    {
+     "id": "ch03/img-07",
+     "alt": "Diagram in two parts: a parent page with keys 310, 333, 345 and spare space, whose child leaf holds keys 333, 335, 337, 340, 342 with no room. After adding key 334, the leaf is split into two leaves, 333 to 335 and 337 to 342, and the parent gains boundary key 337 pointing to both.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-data-warehouse-etl-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "Data Warehousing",
+   "concept": "c03-data-warehouse-etl",
+   "rung": 6,
+   "role": "spot-error",
+   "kind": "tf",
+   "q": "True or false: In the diagram, the business analyst's query goes to the Sales DB, Inventory DB and Geo DB directly.",
+   "answer": false,
+   "explain": "The analyst's query arrow points only to the data warehouse. The OLTP databases are copied into it by extract, transform and load steps, so analytic queries do not disturb them.",
+   "rule": "Analysts query the warehouse, not the live OLTP databases.",
+   "media": [
+    {
+     "id": "ch03/img-08",
+     "alt": "Diagram: three users (customer, warehouse worker, truck driver) each use an OLTP system (ecommerce site with Sales DB, stock-keeping app with Inventory DB, vehicle route planner with Geo DB). Each database goes through extract, a transform box and load into one data warehouse; a business analyst sends a query arrow to the warehouse only.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-star-schema-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "Stars and Snowflakes: Schemas for Analytics",
+   "concept": "c03-star-schema",
+   "rung": 6,
+   "role": "apply",
+   "kind": "mcq",
+   "q": "In the diagram, the first fact_sales row has product_sk 31, store_sk 3, and NULL promotion and customer. What does it record?",
+   "options": [
+    "One Fish food sold in Palo Alto on 2 January 2014, with no promotion and no known customer.",
+    "One Bananas sold in Seattle on 2 January 2014, with the promotion and customer not yet looked up.",
+    "One Fish food sold in San Francisco to a named customer who used a direct mail promotion.",
+    "A new Fish food product added to the product table, still waiting for store and customer values."
+   ],
+   "answer": 0,
+   "explain": "Each fact row is one event; its sk columns point to dimension rows. Product 31 is Fish food, store 3 is Palo Alto, and a NULL means no promotion or customer applies.",
+   "optionExplain": [
+    "Right: follow product_sk to Fish food, store_sk to Palo Alto, date_key to 2 January; NULLs mean none.",
+    "Bananas is product 30 and Seattle is store 1, so this reads the wrong dimension rows.",
+    "San Francisco is store 2, and a NULL customer means no customer is recorded for the sale.",
+    "Fact rows record sales events; products are added to dim_product, not as fact rows."
+   ],
+   "rule": "Each fact row is one event whose key columns point to dimension rows.",
+   "media": [
+    {
+     "id": "ch03/img-09",
+     "alt": "Diagram of a star schema: a central fact_sales table (date_key, product_sk, store_sk, promotion_sk, customer_sk, quantity, net_price, discount_price) with arrows from its key columns to dim_product, dim_store, dim_date, dim_customer and dim_promotion tables. The first fact row is date 140102, product 31 (Fish food), store 3 (Palo Alto), NULL promotion, NULL customer, quantity 1, price 2.49.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-bitmap-encoding-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "Column Compression",
+   "concept": "c03-bitmap-encoding",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, product_sk 69 has run-length encoding 0, 4, 12, 2 over 18 rows. Where does 69 occur?",
+   "options": [
+    "In the first 4 rows and the last 2 rows, with 12 other values in between.",
+    "In 4 rows, then 12 rows, then 2 rows, so 69 fills 18 rows in total.",
+    "In row 4 and row 12 only, because the numbers give row positions of each match.",
+    "In the middle 12 rows, framed by 4 non-matching rows and 2 more rows after."
+   ],
+   "answer": 0,
+   "explain": "Run lengths alternate zeros and ones, starting with zeros: 0 zeros, 4 ones, 12 zeros, 2 ones. So 69 fills the first 4 and last 2 of the 18 rows.",
+   "optionExplain": [
+    "Right: runs alternate zeros then ones, so 0 zeros, 4 ones, 12 zeros, 2 ones.",
+    "Treats every run as a match, but runs alternate between rows without the value and rows with it.",
+    "The numbers are run lengths, not row positions, so they do not name individual rows.",
+    "Reads the first run as a run of ones; runs start with zeros, so the 12 are zeros, not matches."
+   ],
+   "rule": "Run-length encoding alternates runs of zeros and ones, starting with zeros.",
+   "media": [
+    {
+     "id": "ch03/img-11",
+     "alt": "Diagram: a product_sk column of 18 values (69 69 69 69 74 31 31 31 31 29 30 30 31 31 31 68 69 69). Below, one row of 18 zero or one boxes per distinct value (29, 30, 31, 68, 69, 74), with ones where that value occurs, then run-length encodings such as 31 as 5, 4, 3, 3 and 69 as 0, 4, 12, 2.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c03-data-cubes-6",
+   "unit": "Chapter 3",
+   "unitTitle": "Storage and Retrieval",
+   "section": "Aggregation: Data Cubes and Materialized Views",
+   "concept": "c03-data-cubes",
+   "rung": 6,
+   "role": "apply",
+   "kind": "mcq",
+   "q": "In the diagram, which cell answers the bottom-left query, total net_price for product_sk 32 over all dates?",
+   "options": [
+    "The 149.60 cell in the first row, since it belongs to product 32.",
+    "The 40710.53 cell in the right-hand total column for date 140101.",
+    "The 14967.09 cell in the bottom total row, under the product 32 column.",
+    "The 132.18 cell in the second row, because it is the latest value for product 32."
+   ],
+   "answer": 2,
+   "explain": "The cube precomputes sums along each dimension. Summing down the product 32 column over all dates gives the bottom-row total, so the query reads one cell.",
+   "optionExplain": [
+    "That cell is only product 32 on one date, not the sum over all dates.",
+    "That total is for a single date across all products, which answers a different query.",
+    "Right: the bottom row holds per-product totals summed over all dates.",
+    "That is one date's value for product 32; cells are not latest values and are not summed alone."
+   ],
+   "rule": "A cube stores sums along dimensions, so a matching total is one lookup.",
+   "media": [
+    {
+     "id": "ch03/img-12",
+     "alt": "Diagram of a grid: rows are date_key (140101 to 140104), columns are product_sk (32 to 35), each cell holds a sum of net_price, for example 149.60 for 140101 and product 32. A right column totals each date (140101 is 40710.53) and a bottom row totals each product (32 is 14967.09). Three SQL SUM queries point at a cell, the right total and the bottom total.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c04-binary-json-6",
+   "unit": "Chapter 4",
+   "unitTitle": "Encoding and Evolution",
+   "section": "JSON, XML, and Binary Variants",
+   "concept": "c04-binary-json",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the MessagePack breakdown, what does each of the three fields still carry that Thrift and Protocol Buffers replace with a number?",
+   "explain": "MessagePack stores every field name as text with a length byte, which is why it saves little over JSON (66 bytes here).",
+   "rule": "Binary JSON encodings keep field names in the data.",
+   "media": [
+    {
+     "id": "ch04/img-01",
+     "alt": "MessagePack encoding of the example record, 66 bytes. A hex byte sequence is shown, then a breakdown: an object marker with 3 entries, then the strings userName, favoriteNumber and interests each with a length byte and the field name spelled in characters, followed by values: Martin, 1337 as uint16 (05 39), and an array of 2 strings, daydreaming and hacking.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "A numeric field tag stored beside the type byte",
+    "The field name spelled out as characters after a length byte",
+    "A schema version number stored at the start of the object",
+    "A pointer to a shared dictionary of field names"
+   ],
+   "answer": 1,
+   "optionExplain": [
+    "Field tags belong to Thrift and Protocol Buffers; the MessagePack breakdown shows names instead of tags.",
+    "The diagram shows userName, favoriteNumber and interests spelled out as bytes after length markers, which is the cost of keeping names.",
+    "No version number appears in the byte sequence; the object marker only gives the entry count of 3.",
+    "There is no dictionary in the diagram; each name is written in full inside the record itself."
+   ]
+  },
+  {
+   "id": "c04-field-tags-6",
+   "unit": "Chapter 4",
+   "unitTitle": "Encoding and Evolution",
+   "section": "Thrift and Protocol Buffers",
+   "concept": "c04-field-tags",
+   "rung": 6,
+   "role": "apply",
+   "kind": "order",
+   "q": "In the Thrift BinaryProtocol breakdown, order the parts of the first field (the string Martin) from first byte to last.",
+   "explain": "Each field starts with a type byte and a field tag, and a string then carries its length before its characters.",
+   "rule": "A tagged field is type, tag, then value.",
+   "media": [
+    {
+     "id": "ch04/img-02",
+     "alt": "Thrift BinaryProtocol encoding of the example record, 59 bytes. The breakdown lists each field as a type byte, a two-byte field tag (1, 2, 3), then the value: string Martin with a four-byte length 6, an i64 holding 1337 in eight bytes, and a list of 2 strings, daydreaming and hacking, each with a four-byte length. A final zero byte ends the struct.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "items": [
+    "Type byte (string)",
+    "Field tag 1",
+    "Length 6",
+    "The characters of Martin"
+   ]
+  },
+  {
+   "id": "c04-compact-varints-6",
+   "unit": "Chapter 4",
+   "unitTitle": "Encoding and Evolution",
+   "section": "Thrift and Protocol Buffers",
+   "concept": "c04-compact-varints",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the CompactProtocol diagram, how are field tag and type stored compared with BinaryProtocol?",
+   "explain": "CompactProtocol packs the tag and type into a single byte, one reason the record shrinks from 59 to 34 bytes.",
+   "rule": "CompactProtocol saves space by packing small values together.",
+   "media": [
+    {
+     "id": "ch04/img-03",
+     "alt": "Thrift CompactProtocol encoding of the example record, 34 bytes. Each field starts with one byte whose bit pattern packs the field tag (shown as an increment from the previous one) beside the type. Martin has a one-byte length 6. The number 1337 is packed into two bytes by a variable-length integer with a sign bit. The list header byte holds 2 items and item type string. Strings carry one-byte lengths, and a zero byte ends the struct.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Both share one byte, with the tag shown as an increment",
+    "The type is dropped, and only a two-byte field tag is kept",
+    "Tag and type each keep a full byte but the lengths shrink",
+    "Tags are removed and fields are found by their order"
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: the diagram shows a byte whose bits hold the tag increment and the type side by side.",
+    "The type is still present; in fact the type nibble such as 8 for string appears in each header byte.",
+    "This describes BinaryProtocol more closely, which uses a type byte plus a two-byte tag, and so is larger.",
+    "Ordering without tags is the Avro approach; here tag increments are still encoded in every header byte."
+   ]
+  },
+  {
+   "id": "c04-writer-reader-schema-6",
+   "unit": "Chapter 4",
+   "unitTitle": "Encoding and Evolution",
+   "section": "Avro",
+   "concept": "c04-writer-reader-schema",
+   "rung": 6,
+   "role": "apply",
+   "kind": "match",
+   "q": "In the schema diagram, match each field to what the Avro reader does with it.",
+   "explain": "Avro resolves by field name: writer-only fields are ignored, reader-only fields take their default, and position does not matter.",
+   "rule": "Avro schema resolution matches fields by name.",
+   "media": [
+    {
+     "id": "ch04/img-06",
+     "alt": "Two tables side by side, writer's schema and reader's schema for a Person record, each with datatype and field name columns. Writer: string userName, union of null and long favoriteNumber, array of string interests, string photoURL. Reader: long userID, union of null and int favoriteNumber, string userName, array of string interests. Arrows join userName, favoriteNumber and interests across the two tables even though their row positions differ. photoURL and userID have no arrow.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "pairs": [
+    [
+     "photoURL (writer only)",
+     "Ignored when reading"
+    ],
+    [
+     "userID (reader only)",
+     "Filled with a default value"
+    ],
+    [
+     "userName (different row position)",
+     "Matched by name, not position"
+    ]
+   ]
+  },
+  {
+   "id": "c04-preserve-unknown-6",
+   "unit": "Chapter 4",
+   "unitTitle": "Encoding and Evolution",
+   "section": "Dataflow Through Databases",
+   "concept": "c04-preserve-unknown",
+   "rung": 6,
+   "role": "spot-error",
+   "kind": "mcq",
+   "q": "In the diagram, the stored record loses photoURL. Which step causes the loss?",
+   "explain": "The old code decodes into a model object with no photoURL field, then encodes from that object, so the field is never written back.",
+   "rule": "Unknown fields vanish if code round-trips through a model object that lacks them.",
+   "media": [
+    {
+     "id": "ch04/img-07",
+     "alt": "Data loss with an old application. A database holds a JSON record with userName, favoriteNumber, interests and photoURL, written by newer code. Old Java Person class code, which has no photoURL field, reads and decodes it into a model object, calls setFavoriteNumber(42), then re-encodes it to JSON and writes it back. The stored record now lacks photoURL, which the diagram labels as lost.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "The database discards unknown keys when it receives a write",
+    "The new code wrote photoURL in a format old code cannot parse",
+    "The setFavoriteNumber call replaces the whole stored document",
+    "Decoding into a model object that has no photoURL field, then re-encoding it"
+   ],
+   "answer": 3,
+   "optionExplain": [
+    "The database stores whatever it is given; the loss happens before the write, inside the application.",
+    "The record decodes fine in the diagram, since the other fields survive; only the unknown one is dropped.",
+    "The setter only changes the favoriteNumber field of the object; it does not touch other fields.",
+    "Correct: the old Person class cannot hold photoURL, so the re-encoded JSON omits it."
+   ]
+  },
+  {
+   "id": "c06-partition-and-replicate-6",
+   "unit": "Chapter 6",
+   "unitTitle": "Partitioning",
+   "section": "Partitioning and Replication",
+   "concept": "c06-partition-and-replicate",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, a user writes to partition 4. Which nodes receive that write through replication streams?",
+   "explain": "Partition 4's leader is on node 4; its followers are on nodes 2 and 3, so those receive the replication streams.",
+   "rule": "Each partition has its own leader and followers, spread over different nodes.",
+   "media": [
+    {
+     "id": "ch06/img-01",
+     "alt": "Four nodes, each holding three partition replicas. Node 1 holds partition 1 leader and partition 2 and 3 followers; node 2 holds partition 2 follower, 3 leader, 4 follower; node 3 holds partition 1 follower, 2 leader, 4 follower; node 4 holds partition 1 and 3 followers and partition 4 leader. Arrows show replication streams from each leader to its followers. A user writes to partition 4 at node 4.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Nodes 1 and 3, as the nodes holding follower copies",
+    "Nodes 1, 2 and 3, since every other node copies each write",
+    "Nodes 2 and 3, which hold followers of partition 4",
+    "Node 4 only, because the leader keeps all copies"
+   ],
+   "answer": 2,
+   "optionExplain": [
+    "Node 1 holds no copy of partition 4; its replicas are partitions 1, 2 and 3.",
+    "Replication goes only to the followers of that partition, not to every other node in the cluster.",
+    "Correct: nodes 2 and 3 each hold a partition 4 follower, so the arrows from node 4 end there.",
+    "Node 4 is the leader, but followers on other nodes exist so the data survives node failure."
+   ]
+  },
+  {
+   "id": "c06-hash-partitioning-6",
+   "unit": "Chapter 6",
+   "unitTitle": "Partitioning",
+   "section": "Partitioning by Hash of Key",
+   "concept": "c06-hash-partitioning",
+   "rung": 6,
+   "role": "predict",
+   "kind": "tf",
+   "q": "True or false: In the diagram, a query for every reading from 17:08:10 to 17:08:15 can be answered by a single partition.",
+   "explain": "Hashing scatters neighbouring timestamps across p0, p2, p3, p6 and p7, so a range query must reach several partitions.",
+   "rule": "Hash partitioning loses key order, so range queries spread out.",
+   "media": [
+    {
+     "id": "ch06/img-03",
+     "alt": "Six consecutive one-second timestamps, 17:08:10 to 17:08:15, each hashed with the first two bytes of MD5 to a number between 0 and 65,535, drawn against eight equal partitions p0 to p7. Values 7,372, 18,805, 50,537, 31,579, 62,253 and 24,510 land in p0, p2, p6, p3, p7 and p2 respectively, so neighbouring timestamps end up in scattered partitions.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "answer": false
+  },
+  {
+   "id": "c06-local-index-6",
+   "unit": "Chapter 6",
+   "unitTitle": "Partitioning",
+   "section": "Partitioning Secondary Indexes by Document",
+   "concept": "c06-local-index",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, why must the red-car query contact both partitions?",
+   "explain": "Each partition indexes only its own documents, so red cars may sit in any partition.",
+   "rule": "A document-partitioned index covers only the documents in its own partition.",
+   "media": [
+    {
+     "id": "ch06/img-04",
+     "alt": "Two partitions, each with a primary key index of car records (id to colour, make, location) and its own secondary indexes on colour and make, covering only its own cars. Partition 0 lists colour:red as 191 and 306; partition 1 lists colour:red as 768. A user asking for a red car sends a scatter/gather read to both partitions.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Colour entries are split by colour, so red appears in each",
+    "The primary key index cannot be searched by colour at all",
+    "Each partition indexes only its own cars, so red ones can be anywhere",
+    "Both partitions must confirm a result before it is returned"
+   ],
+   "answer": 2,
+   "optionExplain": [
+    "Splitting by colour describes a term-partitioned index, not this local one where each partition lists all its colours.",
+    "The primary index is separate; the secondary index on colour exists in each partition and can be searched there.",
+    "Correct: partition 0 holds red cars 191 and 306, partition 1 holds 768, so both must be asked.",
+    "There is no confirmation step; the results are gathered and combined from both partitions."
+   ]
+  },
+  {
+   "id": "c06-global-index-6",
+   "unit": "Chapter 6",
+   "unitTitle": "Partitioning",
+   "section": "Partitioning Secondary Indexes by Term",
+   "concept": "c06-global-index",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, car 768 is stored on partition 1. What follows for a write that adds or changes this car?",
+   "explain": "Its colour:red entry lives in partition 0, so the write may touch an index partition other than the one holding the car.",
+   "rule": "A term-partitioned index makes reads cheap but a single write may touch several partitions.",
+   "media": [
+    {
+     "id": "ch06/img-05",
+     "alt": "Two partitions with primary key indexes of car records and secondary indexes partitioned by term. Partition 0 holds colour:black, colour:red, make:Audi, make:Dodge, make:Ford; partition 1 holds colour:silver, colour:yellow, make:Honda, make:Volvo. Colour:red in partition 0 lists 191, 306 and 768, though 768 is stored in partition 1. Dashed arrows show records pointing to index entries in the other partition. A red-car query goes to partition 0 only.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "The write may also update index entries held on another partition",
+    "The write stays on partition 1 because index and data are kept together",
+    "The write must be copied to every partition to keep indexes aligned",
+    "The write is slower only because partition 1 holds two colours"
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: the red entry for 768 sits in partition 0, so updating the index reaches across partitions.",
+    "That describes the document-partitioned index; in this diagram the red entry is on a different partition.",
+    "Only the partitions holding the affected terms are touched, not all of them, so a full copy is not needed.",
+    "The cost comes from the index entry living elsewhere, not from how many colours one partition holds."
+   ]
+  },
+  {
+   "id": "c06-fixed-partitions-6",
+   "unit": "Chapter 6",
+   "unitTitle": "Partitioning",
+   "section": "Strategies for Rebalancing",
+   "concept": "c06-fixed-partitions",
+   "rung": 6,
+   "role": "predict",
+   "kind": "fill",
+   "q": "In the diagram, adding node 4 moves ____ partitions in total.",
+   "explain": "Four partitions (p4, p9, p14, p19) move, one from each old node, and the rest stay put.",
+   "rule": "With many fixed partitions, a new node steals a few whole partitions.",
+   "media": [
+    {
+     "id": "ch06/img-06",
+     "alt": "Before and after rebalancing. Four nodes (0 to 3) hold partitions p0 to p19, five each. After a fifth node is added, nodes 0 to 3 keep four partitions each and node 4 holds p4, p9, p14 and p19. Dashed lines mark partitions staying on the same node; four solid arrows show those partitions migrating, one from each old node, to node 4.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "accept": [
+    "4",
+    "four",
+    "Four"
+   ]
+  },
+  {
+   "id": "c06-routing-approaches-6",
+   "unit": "Chapter 6",
+   "unitTitle": "Partitioning",
+   "section": "Request Routing",
+   "concept": "c06-routing-approaches",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "match",
+   "q": "In the three routing panels, match each approach to where the partition knowledge lives.",
+   "explain": "The hatched fill marks the knowledge: in the nodes in panel 1, a separate routing tier in panel 2, and the client in panel 3.",
+   "rule": "The three routing approaches differ in who knows the partition assignment.",
+   "media": [
+    {
+     "id": "ch06/img-07",
+     "alt": "Three numbered panels showing a client getting key foo, stored on node 2. In 1, the client contacts node 0 at random, which holds partition knowledge and forwards to node 2. In 2, the client asks a routing tier that holds the knowledge and sends the request to node 2. In 3, the client holds the knowledge and connects directly to node 2. A hatched fill marks where that knowledge lives.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "pairs": [
+    [
+     "Client contacts any node at random, which forwards",
+     "Knowledge held by the nodes"
+    ],
+    [
+     "Client sends all requests to a routing tier",
+     "Knowledge held by the routing tier"
+    ],
+    [
+     "Client connects directly to the owning node",
+     "Knowledge held by the client"
+    ]
+   ]
+  },
+  {
+   "id": "c05-why-replicate-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Leaders and Followers",
+   "concept": "c05-why-replicate",
+   "rung": 6,
+   "role": "apply",
+   "kind": "mcq",
+   "q": "In the diagram, which pair of simultaneous machine failures still leaves every stored document available on some machine?",
+   "options": [
+    "Partition 1, Replica 1 and Partition 1, Replica 2",
+    "Partition 2, Replica 1 and Partition 2, Replica 2",
+    "Partition 1, Replica 2 and Partition 2, Replica 1",
+    "Any two machines, because each document sits on two machines so one copy always remains"
+   ],
+   "answer": 2,
+   "explain": "Each partition holds different documents, and each has two replicas. Losing both replicas of one partition loses its documents; losing one replica from each partition loses nothing.",
+   "optionExplain": [
+    "Both replicas of partition 1 would be gone, so keys 136, 211 and 377 vanish.",
+    "Both replicas of partition 2 would be gone, so keys 629, 696 and 858 vanish.",
+    "Each partition keeps one surviving replica, so every document is still stored somewhere.",
+    "This ignores that the two copies of a document live in the same partition, so losing both machines loses it."
+   ],
+   "rule": "Replicas protect a partition only while at least one of its own copies survives.",
+   "media": [
+    {
+     "id": "ch05/img-01",
+     "alt": "Four boxes in two columns. The left column is Partition 1 with Replica 1 above Replica 2; the right is Partition 2 with Replica 1 above Replica 2. Partition 1 boxes each hold three documents keyed 136, 211 and 377; Partition 2 boxes hold 629, 696 and 858. A dashed double-headed arrow labelled copy of the same data joins the two replicas of each partition.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-semi-sync-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Synchronous Versus Asynchronous Replication",
+   "concept": "c05-semi-sync",
+   "rung": 6,
+   "role": "predict",
+   "kind": "order",
+   "q": "In the diagram, put these events in the order they happen, earliest first.",
+   "items": [
+    "User 1234 sends the update to the leader",
+    "The leader sends the data change to follower 1 and follower 2",
+    "Follower 1 sends ok to the leader",
+    "The leader sends ok to user 1234",
+    "Follower 2 sends its ok to the leader"
+   ],
+   "explain": "The leader waits only for the synchronous follower, follower 1, before telling the user. Follower 2 is asynchronous, so its confirmation arrives after the user has already been told.",
+   "rule": "With one synchronous follower, the user's ok does not wait for the asynchronous ones.",
+   "media": [
+    {
+     "id": "ch05/img-03",
+     "alt": "Timeline with time running left to right and lanes for user 1234, leader, follower 1 and follower 2. The user sends an update to the leader, which sends a data change to both followers and waits. Follower 1 replies ok, and then the leader sends ok to the user. Follower 2's ok reaches the leader later, after the user already has its ok.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-raw-definition-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Reading Your Own Writes",
+   "concept": "c05-raw-definition",
+   "rung": 6,
+   "role": "apply",
+   "kind": "mcq",
+   "q": "In the diagram, user 1234 reads no results for a comment it inserted moments ago. Which sequence explains it?",
+   "options": [
+    "The leader rejected the insert, so no copy of the comment exists on any node",
+    "The select reached follower 2 before the leader's copy of the insert arrived there",
+    "The select went to the leader, which had not yet applied the insert it acknowledged",
+    "Follower 1 overwrote the comment with older data shortly before the select arrived"
+   ],
+   "answer": 1,
+   "explain": "The insert was acknowledged by the leader, but the copy to follower 2 was still in transit when the read arrived. The user's own write is invisible to that read.",
+   "optionExplain": [
+    "The user received insert ok, so the leader accepted the write and has the comment.",
+    "Replication to follower 2 lags, so a read there precedes the insert; this is the stale read shown.",
+    "A leader applies a write before acknowledging it, so reading the leader would find the comment.",
+    "Followers only apply the leader's changes in order; nothing here overwrites a newer value with an older one."
+   ],
+   "rule": "A read from a lagging follower can miss the user's own acknowledged write.",
+   "media": [
+    {
+     "id": "ch05/img-04",
+     "alt": "Timeline with lanes for user 1234, leader, follower 1 and follower 2. The user sends an insert of a comment to the leader and gets insert ok. The leader sends the insert to both followers, but the copy to follower 2 travels slowly. The user's select for that comment goes to follower 2 and returns no results before the insert arrives there.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-mono-anomaly-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Monotonic Reads",
+   "concept": "c05-mono-anomaly",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "tf",
+   "q": "True or false: In the diagram, user 2345's second query returns nothing because the comment was deleted from follower 1 after the first query.",
+   "answer": false,
+   "explain": "Nothing is deleted. The second query went to follower 2, which had not yet received the insert, while the first went to follower 1, which had.",
+   "rule": "Reads from replicas with different lag can make data seem to vanish.",
+   "media": [
+    {
+     "id": "ch05/img-05",
+     "alt": "Timeline with lanes for user 1234, leader, follower 1, follower 2 and user 2345. User 1234 inserts a comment on the leader, which sends the insert to both followers; the copy reaching follower 2 arrives late. User 2345 first runs a select against follower 1 and gets 1 result, then runs the same select against follower 2 and gets no results.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-prefix-anomaly-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Consistent Prefix Reads",
+   "concept": "c05-prefix-anomaly",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, why does the observer hear the answer before the question?",
+   "options": [
+    "Mrs. Cake spoke before Mr. Poons had finished asking, so the answer really came first",
+    "Partition 2's leader accepted the answer before it knew the question had been written anywhere",
+    "The observer read from a leader in one partition and a follower in the other partition",
+    "The question reached the observer through a lagging follower, after the answer arrived by a faster one"
+   ],
+   "answer": 3,
+   "explain": "The two partitions replicate independently. The follower relaying the question lagged more than the follower relaying the answer, so the effect is seen before its cause.",
+   "optionExplain": [
+    "The diagram shows Mrs. Cake answering only after she heard the question.",
+    "Leaders do not need to see the other partition's data; the lag is in the followers.",
+    "Both copies the observer sees come from followers, not from a leader.",
+    "Different lag in two independent partitions reorders what the observer sees."
+   ],
+   "rule": "Independent partitions have no shared order, so lag can reverse cause and effect.",
+   "media": [
+    {
+     "id": "ch05/img-06",
+     "alt": "Timeline with lanes for Mr. Poons, partition 1 leader, partition 1 follower, Mrs. Cake, partition 2 leader, partition 2 follower and an observer. Mr. Poons's question goes to the partition 1 leader and to Mrs. Cake, whose answer goes to the partition 2 leader. The answer reaches the observer through partition 2's follower first; the question arrives later through partition 1's follower.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-write-conflict-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Handling Write Conflicts",
+   "concept": "c05-write-conflict",
+   "rung": 6,
+   "role": "spot-error",
+   "kind": "mcq",
+   "q": "In the diagram, which claim about the two writes is wrong?",
+   "options": [
+    "Leader 1 refuses user 1's write because it detects the conflict before replying ok",
+    "Both users receive ok before either leader has seen the other user's change",
+    "Each leader notices the conflict only when the other leader's change arrives",
+    "Without resolution, leader 1 would hold title B while leader 2 holds title C"
+   ],
+   "answer": 0,
+   "explain": "Each write succeeds locally and is acknowledged. The conflict appears only later, asynchronously, when the leaders exchange their changes.",
+   "optionExplain": [
+    "Both users get ok, so the conflict is not detected at write time; this claim is false.",
+    "This is true: each user is acknowledged by their own leader first.",
+    "This is true: the conflict messages appear after the change arrives from the other leader.",
+    "This is true: each leader applied its own write, so their titles differ until resolved."
+   ],
+   "rule": "In multi-leader replication, conflicts are detected after both writes are acknowledged.",
+   "media": [
+    {
+     "id": "ch05/img-08",
+     "alt": "Timeline with lanes for user 1, leader 1, leader 2 and user 2. A page with id 123 starts with title A. User 1 sets the title to B on leader 1 and user 2 sets it to C on leader 2; each gets ok. The leaders then send each other the change messages (old A, new B and old A, new C), and each reports a conflict on receiving the other's.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-message-overtaking-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Multi-Leader Replication Topologies",
+   "concept": "c05-message-overtaking",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "tf",
+   "q": "True or false: In the diagram, client B's update does not depend on client A's insert, because they are sent to different leaders.",
+   "answer": false,
+   "explain": "B increments the value that A inserted, so the update depends on the insert even though the two clients used different leaders. Leader 2 receives them in the wrong order.",
+   "rule": "A dependency between writes does not disappear because they enter at different leaders.",
+   "media": [
+    {
+     "id": "ch05/img-10",
+     "alt": "Timeline with client A, leaders 1, 2 and 3, and client B. Client A inserts key x with value 1 on leader 1 and gets ok; leader 1 sends the insert to leaders 2 and 3. Client B updates x to value plus one on leader 3, which sends update value 2 to leaders 1 and 2. At leader 2 a shaded box marks the update arriving before the insert.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-read-repair-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Writing to the Database When a Node Is Down",
+   "concept": "c05-read-repair",
+   "rung": 6,
+   "role": "apply",
+   "kind": "mcq",
+   "q": "In the diagram, which step brings replica 3 back up to date after it was offline?",
+   "options": [
+    "User 2345 writes the version 7 value to replica 3 after seeing its old version 6 in a read",
+    "Replica 3 pulls the newer value from replica 1 when it comes back online",
+    "The original write by user 1234 is retried automatically against replica 3",
+    "A leader replays its log to replica 3 once the node is reachable"
+   ],
+   "answer": 0,
+   "explain": "The reader noticed replica 3's stale version 6 in the responses and wrote the newer value back to it. That is read repair.",
+   "optionExplain": [
+    "The reader compares versions and writes the newer value back; this is read repair.",
+    "A background process pulling data would be anti-entropy, which the diagram does not show.",
+    "The diagram shows no retry by user 1234; their write to replica 3 was lost.",
+    "A leaderless database has no leader or log replay, and none appears in the diagram."
+   ],
+   "rule": "A client that sees a stale response during a read can write the newer value back.",
+   "media": [
+    {
+     "id": "ch05/img-11",
+     "alt": "Timeline with user 1234, replicas 1, 2 and 3, and user 2345. User 1234 sets a profile picture; replicas 1 and 2 answer ok, while replica 3 is marked node offline and the write to it is lost. User 2345 then reads all three: replicas 1 and 2 return me-new.jpg version 7, replica 3 returns me-old.jpg version 6. User 2345 then sends a set with version 7 to replica 3, which answers ok.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-quorum-condition-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Writing to the Database When a Node Is Down",
+   "concept": "c05-quorum-condition",
+   "rung": 6,
+   "role": "apply",
+   "kind": "fill",
+   "q": "In the diagram, the replicas written and the replicas read overlap at replica number ____.",
+   "accept": [
+    "3",
+    "three",
+    "replica 3"
+   ],
+   "explain": "Writes succeeded on replicas 1, 2 and 3, and reads succeeded on replicas 3, 4 and 5. Since w + r > n, the two sets must share a node, here replica 3.",
+   "rule": "When w + r > n, a read set always overlaps a successful write set.",
+   "media": [
+    {
+     "id": "ch05/img-12",
+     "alt": "Five replicas in a row with n = 5. A writer above reaches replicas 1, 2 and 3 (w = 3 successful writes, outlined) while the arrows to replicas 4 and 5 are crossed out. A reader below fails to reach replicas 1 and 2 (crossed out) but reads replicas 3, 4 and 5 (r = 3 successful reads, outlined). The two outlines overlap at replica 3.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-concurrent-writes-problem-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Detecting Concurrent Writes",
+   "concept": "c05-concurrent-writes-problem",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, node 2 holds B and node 3 holds A. What accounts for the difference?",
+   "options": [
+    "Client B's write was lost on node 3 because node 3 was marked unresponsive",
+    "The nodes received the two writes in opposite orders and each kept the last to arrive",
+    "Node 2 is the only one that checks which client wrote first and keeps that value",
+    "Client A's write failed on node 2, so only B's value could be stored there"
+   ],
+   "answer": 1,
+   "explain": "Node 2 received A then B and node 3 received B then A. Each simply overwrote on arrival, so replicas permanently disagree.",
+   "optionExplain": [
+    "The unresponsive node in the diagram is node 1, not node 3.",
+    "Different arrival order combined with overwrite-on-arrival leaves each node with a different value.",
+    "Nothing in the diagram shows any node comparing writers; each overwrites on arrival.",
+    "Node 2 acknowledged A first; its write to node 2 did arrive before B."
+   ],
+   "rule": "Overwriting on arrival makes replicas depend on message order.",
+   "media": [
+    {
+     "id": "ch05/img-13",
+     "alt": "Timeline with client A, nodes 1, 2 and 3, and client B. Client A sends set X = A and client B sends set X = B to all three nodes, but node 1 is marked unresponsive and B's write to it is lost. Node 2 receives A then B; node 3 receives B then A. A later get X by client B returns A from node 1, B from node 2 and A from node 3.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c05-version-algorithm-6",
+   "unit": "Chapter 5",
+   "unitTitle": "Replication",
+   "section": "Detecting Concurrent Writes",
+   "concept": "c05-version-algorithm",
+   "rung": 6,
+   "role": "apply",
+   "kind": "mcq",
+   "q": "In the diagram, client 1 writes [milk, flour] with version 1, yet the reply still lists [eggs]. Why?",
+   "options": [
+    "The server merges every incoming write with all values it already holds",
+    "The write overwrote only values up to version 1, and [eggs] was stored afterward as version 2",
+    "Client 2's write was acknowledged first and so always wins over client 1",
+    "The server kept [eggs] because it is shorter than [milk, flour] and so cannot be dropped"
+   ],
+   "answer": 1,
+   "explain": "Version 1 tells the server which state the client had seen. Only values at or below that version are overwritten; [eggs], written later at version 2, is a concurrent sibling.",
+   "optionExplain": [
+    "The server does not merge; merging is left to clients, as the reply with two values shows.",
+    "The version sent says what the client knew, so later values survive as siblings.",
+    "No such precedence exists; the later write does not win by being acknowledged earlier.",
+    "Value size plays no role; only the version number sent decides what is overwritten."
+   ],
+   "rule": "A write overwrites only the values its version number says the client had seen.",
+   "media": [
+    {
+     "id": "ch05/img-14",
+     "alt": "Timeline with client 1, a database and client 2 building a shopping cart. Client 1 sets cart [milk], then [milk, flour] with version 1, then [milk, flour, eggs, bacon] with version 3. Client 2 sets [eggs] with no version, then [eggs, milk, ham] with version 2. Each reply gives a version number and the values held; from the second write onward replies list two values.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c07-unread-counter-anomaly-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Single-Object and Multi-Object Operations",
+   "concept": "c07-unread-counter-anomaly",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, user 2's first query shows the new email, but the second query returns 0 unread. What order of events explains this?",
+   "explain": "User 2's queries ran in the gap after the insert and before the counter update, so the two copies of the truth disagreed. Isolation would have hidden the half-finished transaction.",
+   "rule": "Without isolation, a reader can run between the writes of one transaction and see an inconsistent state.",
+   "media": [
+    {
+     "id": "ch07/img-02",
+     "alt": "Timeline with User 1, Database and User 2. User 1 inserts an email for recipient 2 and gets ok. User 2 then selects the email (returns Hello, true) and next selects the unread count, which returns 0. Only afterwards does User 1 send the update that adds 1 to the unread counter, and it gets ok.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Both of user 1's writes were applied before user 2 ran either of its queries.",
+    "User 1's insert was rolled back after user 2's first query had already read it.",
+    "User 2's second query ran after the insert but before the counter update was applied.",
+    "User 2's second query ran first, so it read the counter before the email existed."
+   ],
+   "answer": 2,
+   "optionExplain": [
+    "If both writes had finished first, user 2 would see the email and a counter of one.",
+    "A rollback would be an atomicity story, but the diagram shows the update arriving later with ok.",
+    "Correct: the query slotted between the two writes, so it saw the new email but the old counter.",
+    "The email query comes first in the diagram, so the counter was not read before the email."
+   ]
+  },
+  {
+   "id": "c07-dirty-reads-why-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Read Committed",
+   "concept": "c07-dirty-reads-why",
+   "rung": 6,
+   "role": "predict",
+   "kind": "fill",
+   "q": "In the diagram, user 2 sends one more get x shortly before user 1 commits. The value returned is ____.",
+   "explain": "Until user 1 commits, other transactions keep seeing the old committed value 2, even though x = 3 has been written. The new value appears only after the commit.",
+   "rule": "Under read committed, uncommitted writes stay invisible to other transactions until commit.",
+   "media": [
+    {
+     "id": "ch07/img-04",
+     "alt": "Timeline with User 1, Database and User 2. User 1 sets x = 3, then y = 3, each acknowledged ok, then commits. User 2 runs get x three times: the first two, made before the commit, return 2, and the third, made after the commit, returns 3.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "accept": [
+    "2",
+    "2.",
+    "two"
+   ]
+  },
+  {
+   "id": "c07-dirty-writes-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Read Committed",
+   "concept": "c07-dirty-writes",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, Alice's and Bob's writes interleave and both transactions commit. What final state do the listing and the invoice end in?",
+   "explain": "Each object keeps whichever write came last, and the last write to the listing is Bob's while the last to the invoice is Alice's. The sale is split between two customers.",
+   "rule": "Interleaved uncommitted writes to several objects can leave them pointing at different winners.",
+   "media": [
+    {
+     "id": "ch07/img-05",
+     "alt": "Timeline with Alice, Listings, Invoices and Bob. Alice sets the listing buyer to Alice, then the invoice recipient to Alice. Bob updates the listing buyer to Bob between her two writes, then sets the invoice recipient to Bob. Annotations say the listing ends with buyer Bob and the invoice with recipient Alice.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "The listing names Bob but the invoice goes to Alice.",
+    "The listing names Alice and the invoice also goes to Alice.",
+    "The listing names Alice but the invoice goes to Bob.",
+    "The listing and the invoice both name Bob, the later transaction."
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: Bob's listing write came after Alice's, while Alice's invoice write came after Bob's.",
+    "That would need Alice's listing write to come last, but Bob overwrote it in the diagram.",
+    "This swaps the winners; the diagram's annotations show the opposite pairing.",
+    "Bob's invoice write was overwritten by Alice's later one, so the invoice does not name Bob."
+   ]
+  },
+  {
+   "id": "c07-read-skew-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Snapshot Isolation and Repeatable Read",
+   "concept": "c07-read-skew",
+   "rung": 6,
+   "role": "apply",
+   "kind": "order",
+   "q": "In the diagram, put these steps in the order they happen, so that Alice's total of her two balances comes to 900.",
+   "explain": "Alice reads account 1 before the transfer touches it and account 2 after the transfer has changed it, so she combines an old and a new value. That is read skew.",
+   "rule": "A reader that straddles a transaction's writes can see one object before the change and another after it.",
+   "media": [
+    {
+     "id": "ch07/img-06",
+     "alt": "Timeline with Alice, Account 1, Account 2 and a Transfer. Both balances start at 500. Alice reads account 1 and gets 500. The transfer then adds 100 to account 1 (now 600), subtracts 100 from account 2 (now 400) and commits. Alice reads account 2 and gets 400.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "items": [
+    "Alice reads account 1 and gets 500",
+    "The transfer adds 100 to account 1, making it 600",
+    "The transfer subtracts 100 from account 2, making it 400",
+    "Alice reads account 2 and gets 400"
+   ]
+  },
+  {
+   "id": "c07-mvcc-txid-created-deleted-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Snapshot Isolation and Repeatable Read",
+   "concept": "c07-mvcc-txid-created-deleted",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, transaction 12 reads account 2 and gets 500, although a row with balance 400 exists. Which reason fits the visibility rules?",
+   "explain": "The 400 row was created by transaction 13, which started after transaction 12, so its writes are ignored. The 500 row's deletion by 13 is ignored for the same reason.",
+   "rule": "A transaction ignores writes from transactions that started after it did, whether or not they have committed.",
+   "media": [
+    {
+     "id": "ch07/img-07",
+     "alt": "Transaction 12 reads two accounts while transaction 13 transfers 100 between them. Account 1 rows show created by 3 with balance 500, then a row deleted by 13 and a new row created by 13 with 600. Account 2 shows 500 deleted by 13 and a new 400 row created by 13. Transaction 12 reads 500 from both accounts.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Transaction 12 always reads the oldest version of every row, whatever the transaction IDs say.",
+    "The 400 row was deleted by transaction 12 itself before its read reached the table.",
+    "Transaction 12 is waiting on a lock held by transaction 13 and was handed the last value.",
+    "The 400 row was created by transaction 13, which has a later ID, so transaction 12 ignores it."
+   ],
+   "answer": 3,
+   "optionExplain": [
+    "Readers pick the newest version that is visible to them, not simply the oldest one.",
+    "The row's deleted-by and created-by fields name transaction 13, not transaction 12.",
+    "Snapshot reads do not take locks; readers are not blocked by writers in this design.",
+    "Correct: the later transaction ID makes both of 13's changes invisible to transaction 12."
+   ]
+  },
+  {
+   "id": "c07-write-skew-doctors-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Write Skew and Phantoms",
+   "concept": "c07-write-skew-doctors",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, Alice and Bob update different doctor rows. Why does the database let both transactions commit?",
+   "explain": "The two writes touch different rows, so there is no write conflict, and each check saw a valid snapshot showing two doctors. Only together do they break the rule.",
+   "rule": "Write skew slips through because conflict checks look at the same row, not at a rule spanning several rows.",
+   "media": [
+    {
+     "id": "ch07/img-08",
+     "alt": "Two columns of pseudo-code for Alice and Bob. Each begins a transaction, counts doctors with on_call true for shift 1234 (result 2), and if the count is at least 2 sets their own on_call to false, then commits. The doctors table starts with Alice and Bob true, Carol false, and ends with all three false.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Bob's check read Alice's uncommitted change, a dirty read that the database tolerates.",
+    "The two writes touch different rows, so no conflict exists, and each check saw a valid snapshot.",
+    "Alice's update overwrote Bob's earlier uncommitted write to the same row, a dirty write.",
+    "Both transactions changed the same row and the database applied each change in turn."
+   ],
+   "answer": 1,
+   "optionExplain": [
+    "Both counts return 2, so Bob did not see Alice's uncommitted update.",
+    "Correct: no row is shared, so row-level conflict detection has nothing to flag.",
+    "Alice writes her own row and Bob writes his, so there is no overwrite of an uncommitted write.",
+    "The updates are on rows named Alice and Bob, so no single row is changed twice."
+   ]
+  },
+  {
+   "id": "c07-interactive-vs-stored-procedure-6",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Actual Serial Execution",
+   "concept": "c07-interactive-vs-stored-procedure",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, how does the stored procedure version differ from the interactive transaction for the application?",
+   "explain": "In the stored procedure case the whole check-and-update logic runs inside the database after one call, so the application does not wait on network hops between statements.",
+   "rule": "Shipping the whole transaction as one call removes the round trips between statements.",
+   "media": [
+    {
+     "id": "ch07/img-09",
+     "alt": "Two timelines. Interactive transaction: Application sends a select count query across a network hop to query processor and storage, gets 2, evaluates an if in its own code, then sends a separate update and gets ok. Stored procedure: Application sends one call to run the procedure, whose select, if and update run inside the database, and gets one ok.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "It sends the select first, then decides in its own code, then sends the update.",
+    "It uses a faster query processor, but still makes two separate requests to it.",
+    "It makes a single call and the select, if and update all run inside the database.",
+    "It skips the if check, so the update always runs without reading the count."
+   ],
+   "answer": 2,
+   "optionExplain": [
+    "That describes the interactive version in the top half of the diagram.",
+    "The diagram shows one request in the stored case, not two to a faster processor.",
+    "Correct: one network hop in, one ok back, with all steps executed next to the data.",
+    "The if check is still present inside the procedure; only where it runs has changed."
+   ]
+  },
+  {
+   "id": "c07-ssi-writes-affect-reads-7",
+   "unit": "Chapter 7",
+   "unitTitle": "Transactions",
+   "section": "Serializable Snapshot Isolation (SSI)",
+   "concept": "c07-ssi-writes-affect-reads",
+   "rung": 7,
+   "role": "discriminate",
+   "kind": "tf",
+   "q": "True or false: In the diagram, the index-range table records transactions 42 and 43 as readers of key 1234, so a write by either can flag the other's read.",
+   "explain": "Both transactions are listed as readers of the range, so each one's update can notify the other that its read may be outdated. The record only warns, it does not block.",
+   "rule": "SSI tracks readers per index range and uses writes as tripwires that notify rather than block.",
+   "media": [
+    {
+     "id": "ch07/img-11",
+     "alt": "Same timeline of transactions 42 and 43 as the previous figure, each reading doctors for shift 1234, then updating, 42 committing first and 43 aborted. A table of index-range locks lists key range 1234 as read by transaction 42 and read by transaction 43, with a note that 42's update affects 43's read.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "answer": true
+  },
+  {
+   "id": "c08-six-failure-causes-6",
+   "unit": "Chapter 8",
+   "unitTitle": "The Trouble with Distributed Systems",
+   "section": "Unreliable Networks",
+   "concept": "c08-six-failure-causes",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, the client sees no reply in all three cases. In which case did the service actually process the request?",
+   "explain": "Only in case (c) does the request arrive and get handled, with the response lost on the way back. The client sees the same silence as in the others.",
+   "rule": "A missing response does not show whether the work was done, since a lost response hides success.",
+   "media": [
+    {
+     "id": "ch08/img-01",
+     "alt": "Three timelines with Client, Network and Service, each ending in question marks as the client waits. (a) The request is lost in the network, shown as an X. (b) The request reaches a service marked node unresponsive and is lost. (c) The service replies ok, but the response is lost in the network.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Case (a) only, where the request is lost in the network.",
+    "Case (c) only, where the response is lost in the network.",
+    "Case (b) only, where the node was unresponsive at that time.",
+    "Cases (a) and (b), since both involve the request reaching the node."
+   ],
+   "answer": 1,
+   "optionExplain": [
+    "In case (a) the request never arrives, so there was nothing to process.",
+    "Correct: the service handled the request and replied ok, but the reply never made it back.",
+    "In case (b) the request is dropped at an unresponsive node, so it was not handled.",
+    "Case (a) loses the request before it reaches the node, so it cannot count as arriving."
+   ]
+  },
+  {
+   "id": "c08-lww-lost-write-6",
+   "unit": "Chapter 8",
+   "unitTitle": "The Trouble with Distributed Systems",
+   "section": "Relying on Synchronized Clocks",
+   "concept": "c08-lww-lost-write",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, node 2 receives x = 1 stamped 42.004 and x = 2 stamped 42.003. Under last write wins, what does node 2 keep?",
+   "explain": "Last write wins keeps the highest timestamp, so node 2 keeps x = 1 and silently drops x = 2, although B's increment was causally later. Node 3's clock ran behind node 1's.",
+   "rule": "Timestamps from unsynchronized clocks can reverse the real order and cause the newer write to be dropped.",
+   "media": [
+    {
+     "id": "ch08/img-03",
+     "alt": "Timeline with Client A, Nodes 1, 2, 3 and Client B, each node showing clock readings. Client A sets x = 1 on node 1 (clock 42.004). Client B then increments x on node 3 (clock 42.003). Node 1's write is replicated with ts 42.004, node 3's x = 2 with ts 42.003, and both arrive at node 2.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "x = 2, because B's increment happened after A's write in real time.",
+    "x = 2, because its lower timestamp marks it as the more recent write.",
+    "Both values, because node 2 stores every version it receives.",
+    "x = 1, because it carries the higher timestamp, so B's write is discarded."
+   ],
+   "answer": 3,
+   "optionExplain": [
+    "Last write wins compares timestamps, not the real order of events.",
+    "A lower timestamp means an earlier time, so it loses the comparison.",
+    "Last write wins keeps a single value per key rather than storing every version.",
+    "Correct: 42.004 beats 42.003, so the causally later increment is lost without any error."
+   ]
+  },
+  {
+   "id": "c08-fencing-tokens-6",
+   "unit": "Chapter 8",
+   "unitTitle": "The Trouble with Distributed Systems",
+   "section": "The Truth Is Defined by the Majority",
+   "concept": "c08-fencing-tokens",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, suppose client 1's write with token 33 reached storage before client 2's write with token 34. What would storage do?",
+   "explain": "Storage rejects only a token lower than one it has already processed. Token 33 arrives first and is the highest seen, so it is accepted; 34 is higher still and is accepted too.",
+   "rule": "The resource accepts writes whose token is at least as high as any it has processed, and rejects lower ones.",
+   "media": [
+    {
+     "id": "ch08/img-05",
+     "alt": "Same lock service timeline, now with fencing tokens. Client 1 gets lease with token 33 and pauses in GC. Client 2 gets token 34 and writes data with token 34, which storage accepts. Client 1 wakes and writes with token 33, and storage rejects it as an old token.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ],
+   "options": [
+    "Accept 33 first, then accept 34, since each token is higher than any already processed.",
+    "Reject 33, because the lease behind token 33 had already expired when it arrived.",
+    "Accept 33 and then reject 34, because the first writer to arrive holds the file.",
+    "Reject both writes and ask the lock service which lease is currently valid."
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: tokens are checked against the highest seen, and both arrive in increasing order.",
+    "Storage does not know about expiry; it compares token numbers, which is why it stays safe.",
+    "Arrival order is not what decides; a higher token is accepted over a lower earlier one.",
+    "Storage decides alone from the tokens, without calling back to the lock service."
+   ]
+  },
+  {
+   "id": "c09-read-cases-around-a-write-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "What Makes a System Linearizable?",
+   "concept": "c09-read-cases-around-a-write",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, why must client A's third read return 1 while B's reads may return either 0 or 1?",
+   "options": [
+    "A's third read starts after the write returned ok, so no write is in progress to excuse an old value",
+    "A's earlier reads returned 0 and 1 in turn, so its next read continues the pattern and ends on 1",
+    "A is the client closest to the database, so its reads always see newer data than B's reads do",
+    "B's reads are later in time than A's third read, so they are allowed to lag behind the write"
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: the arrow from the write's ok to A's read shows the read begins once the write is complete.",
+    "Reads do not follow a pattern; the value depends on timing against the write, not on earlier results.",
+    "Distance from the database plays no part in the model; only the order of request start and finish times counts.",
+    "B's reads begin before the write finishes, so they overlap it and are not later than A's third read."
+   ],
+   "explain": "A's third read begins after write C has returned ok, so the write is no longer in progress. B's reads overlap the write, so either value is allowed.",
+   "rule": "A read that starts after a write completes must see the new value; an overlapping read may see either.",
+   "media": [
+    {
+     "id": "ch09/img-02",
+     "alt": "Timeline for clients A, B and C on a register x. C has one long bar, write(x, 1), ending with ok. A makes three reads: the first, before the write, returns 0; the second, overlapping the write, returns 0 or 1; the third starts after the write ends, with an arrow from the write's end, and returns 1. B makes two reads, both overlapping the write, each labelled returns 0 or 1.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c09-no-flip-flop-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "What Makes a System Linearizable?",
+   "concept": "c09-no-flip-flop",
+   "rung": 6,
+   "role": "apply",
+   "kind": "tf",
+   "q": "True or false: In the diagram, B's first read returning 0 is allowed, since it ended before A's read that returned 1 began.",
+   "answer": true,
+   "explain": "B's first read overlaps the write and finishes before A's second read starts, so no earlier read had shown 1 yet. Returning 0 breaks no recency rule.",
+   "rule": "A read may return the old value unless a read of the new value finished before it began.",
+   "media": [
+    {
+     "id": "ch09/img-03",
+     "alt": "Timeline for clients A, B and C on register x, with C's long write(x, 1) ending in ok. A reads three times, returning 0, then 1, then 1. B reads twice: the first returns 0 and ends before A's second read begins; the second returns 1. An arrow runs from A's second read, which returned 1, to B's second read, which starts after A's second read ended.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c09-linearization-points-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "What Makes a System Linearizable?",
+   "concept": "c09-linearization-points",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, D's cas(x, 0, 3) returns error. What explains the error?",
+   "options": [
+    "D's own earlier write of 0 was lost, so the register held no value when the cas ran",
+    "The cas reached the database before A's write of 1, and requests that arrive early are rejected",
+    "A cas cannot run while other clients are reading, so the database refuses it with an error",
+    "By the time it took effect, x had been changed to 2, so x no longer equalled the expected 0"
+   ],
+   "answer": 3,
+   "optionExplain": [
+    "D's write(x, 0) returned ok and took effect first; the later writes simply replaced that value.",
+    "The marker for the cas lies after A's write and B's cas on the database line, not before them.",
+    "The model does not block cas during reads; other clients may change values at any time.",
+    "Correct: the database line shows x=1 and x=2 before the marker for D's cas, so the expected 0 no longer matched."
+   ],
+   "explain": "A compare-and-set succeeds only if x equals the expected value when it takes effect. By then writes by A and B had changed x from 0 to 1 and then 2, so the cas fails.",
+   "rule": "A cas fails when the register no longer holds the expected old value at the point it takes effect.",
+   "media": [
+    {
+     "id": "ch09/img-04",
+     "alt": "Timeline for clients A, B, C, D and a Database line with marker points x=0, x=1, x=2, x=4. Operations: D write(x,0) ok; A write(x,1) ok; B read returns 1; C reads 1 then 2; B cas(x,1,2) ok; C cas(x,2,4) ok; D cas(x,0,3) returns error; A read returns 4. Grey lines join each operation to a database marker. B's last read, shaded with a warning sign, starts after A's read of 4 ended and returns 2.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c09-datacenter-partition-scenario-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "The Cost of Linearizability",
+   "concept": "c09-datacenter-partition-scenario",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "mcq",
+   "q": "In the diagram, what has failed during the network interruption?",
+   "options": [
+    "Each application can no longer reach the database inside its own datacenter",
+    "Only the replication connection between the databases, while clients, applications and local databases keep working",
+    "The clients of Datacenter 2 can no longer reach any application at all",
+    "One of the two databases has crashed and must be replaced before service resumes"
+   ],
+   "answer": 1,
+   "optionExplain": [
+    "The arrows from each application to its local DB are intact; only the link between the datacenters is marked broken.",
+    "Correct: the break mark sits on the replication connection, and the client arrows remain unbroken.",
+    "Client arrows to Datacenter 2's application are drawn unbroken, so those clients can still reach it.",
+    "No database is shown failed; the fault is in the network between them, which is a partition, not a crash."
+   ],
+   "explain": "Only the replication link between the two databases is cut; each datacenter's application, database and clients still work. The choice is whether they may keep serving requests without the other side.",
+   "rule": "A network partition can cut off replication while every node and client stays healthy.",
+   "media": [
+    {
+     "id": "ch09/img-07",
+     "alt": "Two boxes, Datacenter 1 on the left and Datacenter 2 on the right, each holding an Application with an arrow to its DB. A curved replication connection between the two DBs is broken by a mark labelled network interruption (network partition). Below, client figures send arrows to the application in their own datacenter: four on the left, three on the right.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c09-lamport-max-counter-rule-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "Sequence Number Ordering",
+   "concept": "c09-lamport-max-counter-rule",
+   "rung": 6,
+   "role": "apply",
+   "kind": "order",
+   "q": "In the diagram, order these timestamps from smallest to largest under Lamport timestamp ordering.",
+   "items": [
+    "(1, 1)",
+    "(4, 2)",
+    "(5, 2)",
+    "(6, 1)",
+    "(6, 2)"
+   ],
+   "explain": "Timestamps compare by counter first; when counters tie, the greater node ID wins. So (6, 1) comes before (6, 2).",
+   "rule": "Compare the counter first and break ties with the node ID.",
+   "media": [
+    {
+     "id": "ch09/img-08",
+     "alt": "Timeline with Client A, Node 1, Node 2, Client B. A writes with max = 0 to Node 1 (counter c = 1) and receives (1, 1). B writes to Node 2 four times with max = 0, 1, 2, 3, counters c = 1 to 4, replies (1, 2), (2, 2), (3, 2), (4, 2). A writes max = 1 to Node 2 (c = 5), gets (5, 2); then writes max = 5 to Node 1 (c = 6), gets (6, 1). B writes max = 4 to Node 2 (c = 6), gets (6, 2).",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c09-two-phase-commit-flow-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "Atomic Commit and Two-Phase Commit (2PC)",
+   "concept": "c09-two-phase-commit-flow",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, until when does Database 1 hold the locks shown by the grey bar?",
+   "options": [
+    "Until it answers yes to the prepare request, since the vote ends its work",
+    "Until the coordinator finishes sending write data to both databases",
+    "Until the commit request of phase 2 has been processed and acknowledged",
+    "Until phase 1 ends, as soon as both databases have voted yes"
+   ],
+   "answer": 2,
+   "optionExplain": [
+    "The grey bar continues past the yes vote, because the outcome is still unknown at that point.",
+    "Write data is only the start of the transaction; the grey bar extends far beyond that step.",
+    "Correct: the bar ends only after the commit round trip in phase 2.",
+    "Phase 1 ends at the votes, but the bar still runs through all of phase 2 afterwards."
+   ],
+   "explain": "The grey bar for each database runs from its write data until the commit has been processed, so locks are held through both phases.",
+   "rule": "A participant holds its transaction locks until the commit or abort has been carried out.",
+   "media": [
+    {
+     "id": "ch09/img-09",
+     "alt": "Timeline with Coordinator, Database 1 and Database 2. Coordinator sends write data to each database, each replying ok. In phase 1 it sends prepare to both and each replies yes. In phase 2 it sends commit to both and each replies ok. A grey bar on each database, running from its write data until after commit is processed, marks locks held by the transaction.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c09-coordinator-failure-in-doubt-6",
+   "unit": "Chapter 9",
+   "unitTitle": "Consistency and Consensus",
+   "section": "Atomic Commit and Two-Phase Commit (2PC)",
+   "concept": "c09-coordinator-failure-in-doubt",
+   "rung": 6,
+   "role": "spot-error",
+   "kind": "mcq",
+   "q": "In the diagram, database 1 voted yes but hears nothing more from the coordinator. Why can it not commit on its own?",
+   "options": [
+    "It does not know the decision, and another participant may have voted no, which makes the outcome abort",
+    "The crash destroyed the coordinator's signature, so any commit by database 1 would be rejected as forged",
+    "A yes vote can only be followed by a commit after database 1 sends a second prepare to itself",
+    "Database 2 holds the locks on the shared rows, so database 1 is physically blocked from committing"
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: the participant only knows its own vote, not whether all others voted yes.",
+    "Two-phase commit uses no signatures; the issue is missing knowledge of the decision, not authentication.",
+    "No second prepare exists in the protocol; the yes vote is already the participant's promise to commit if told.",
+    "Locks are held per database for its own rows; database 2's locks do not stop database 1 committing."
+   ],
+   "explain": "Database 1 never learned the decision. If any participant had voted no, the outcome would be abort, so a unilateral commit could contradict it.",
+   "rule": "A participant that voted yes must wait for the coordinator's decision; guessing either way can break atomicity.",
+   "media": [
+    {
+     "id": "ch09/img-10",
+     "alt": "Timeline with Coordinator, Database 1 and Database 2. Coordinator sends write data (both ok), then prepare in phase 1 (both reply yes). In phase 2 the coordinator crashes, shown by an explosion and a grey crashed bar. The commit request reaches Database 2, which replies ok; the commit to Database 1 never arrives, and its line is labelled stuck in prepared state.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c10-the-shuffle-6",
+   "unit": "Chapter 10",
+   "unitTitle": "Batch Processing",
+   "section": "MapReduce Job Execution",
+   "concept": "c10-the-shuffle",
+   "rung": 6,
+   "role": "predict",
+   "kind": "fill",
+   "q": "If the job in the diagram had 5 map tasks and 3 reduce tasks, each reduce task would fetch ____ sorted files.",
+   "accept": [
+    "5",
+    "five"
+   ],
+   "explain": "Every map task writes one sorted file per reduce task, so each reducer fetches one file from each of the 5 mappers and merges them.",
+   "rule": "Each reducer fetches one sorted partition from every map task.",
+   "media": [
+    {
+     "id": "ch10/img-01",
+     "alt": "Three map tasks on the left, each with an input file (m1, m2, m3 from the HDFS input directory), a Mapper and three sorted output files named by map and reduce number, such as m1,r1 m1,r2 m1,r3. Arrows carry each file to the reduce task with its r number. Each of three reduce tasks gets three files, merges them, runs a Reducer and writes r1, r2 or r3 to the HDFS output directory.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c10-sort-merge-join-6",
+   "unit": "Chapter 10",
+   "unitTitle": "Batch Processing",
+   "section": "Reduce-Side Joins and Grouping",
+   "concept": "c10-sort-merge-join",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, a new activity event for user 106 is added. Where do it and the profile record for 106 go?",
+   "options": [
+    "Both go to reducer partition 1, because 106 is an even-numbered user ID",
+    "The event goes to partition 1 and the profile to partition 2, as they come from different mappers",
+    "Both go to reducer partition 2, because newly added records are sent to the last partition",
+    "They go to whichever partitions are least busy, since the user ID does not decide placement"
+   ],
+   "answer": 0,
+   "optionExplain": [
+    "Correct: the key decides the partition, so the event and profile of user 106 meet in partition 1.",
+    "Placement follows the key, not the source dataset, otherwise the join could never bring the records together.",
+    "New records get no special treatment; the user ID alone determines the partition.",
+    "Load does not choose the partition; if it did, matching records could be separated and the join would fail."
+   ],
+   "explain": "The reducer partition is chosen by the key, here the user ID, so records of one user from both datasets meet in the same partition. 106 is even, so partition 1.",
+   "rule": "The join key decides the reducer, so all records for one key from both inputs arrive together.",
+   "media": [
+    {
+     "id": "ch10/img-03",
+     "alt": "Two mapper pipelines feed two reducer partitions. The user activity mapper reads events (user 104 loaded /x, user 173 loaded /y, user 104 loaded /z) and emits 104 with url /x, 104 with url /z, 173 with url /y. The user database mapper reads records of users 103 and 104 and emits 104 with dob 1989 and 103 with dob 1947. Reducer partition 1 (even-numbered user IDs) receives the 104 records and outputs url and dob pairs; partition 2 (odd-numbered IDs) takes 173 and 103.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c11-multiple-consumers-6",
+   "unit": "Chapter 11",
+   "unitTitle": "Stream Processing",
+   "section": "Messaging Systems",
+   "concept": "c11-multiple-consumers",
+   "rung": 6,
+   "role": "predict",
+   "kind": "fill",
+   "q": "In diagram (b), a third consumer joins the fan-out setup and would receive ____ of the messages m1 to m4.",
+   "accept": [
+    "4",
+    "four",
+    "all",
+    "all four",
+    "all of them",
+    "every one"
+   ],
+   "explain": "In fan-out every message is delivered to every consumer, so a new consumer would see all four messages, not a share of them.",
+   "rule": "Fan-out gives every message to every consumer; load balancing splits the messages among them.",
+   "media": [
+    {
+     "id": "ch11/img-01",
+     "alt": "Two timelines, (a) load balancing and (b) fan-out, with lanes Producer 1, Producer 2, Broker, Consumer 1 and Consumer 2. In both, producers send messages m1 to m5 to the broker. In (a) m1 and m3 go to Consumer 2 while m2 and m4 go to Consumer 1. In (b) every message m1 to m4 goes to both consumers.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c11-log-based-broker-6",
+   "unit": "Chapter 11",
+   "unitTitle": "Stream Processing",
+   "section": "Partitioned Logs",
+   "concept": "c11-log-based-broker",
+   "rung": 6,
+   "role": "discriminate",
+   "kind": "multi",
+   "q": "In the diagram, which statements about the topic B partitions and the consumer group hold?",
+   "options": [
+    "Each partition of topic B is read by exactly one client of the consumer group.",
+    "The two clients take turns reading single messages from the same partition.",
+    "Each client records a separate offset for every partition it reads.",
+    "Numbering in partition 2 continues from the last number of partition 1."
+   ],
+   "answers": [
+    0,
+    2
+   ],
+   "explain": "The group splits topic B by whole partitions, and each client tracks one offset per partition it reads. Message numbers restart in each partition.",
+   "optionExplain": [
+    "Correct: the picture shows partitions 0 and 1 going to one client and partition 2 to the other.",
+    "Wrong: partitions are assigned whole, not shared message by message, within a group.",
+    "Correct: client one lists offsets B.0 and B.1 while client two lists B.2.",
+    "Wrong: every partition is numbered from 1 independently, so offsets only order messages within a partition."
+   ],
+   "rule": "A log is split into partitions; each partition is read in order by one consumer of a group, which tracks its offset.",
+   "media": [
+    {
+     "id": "ch11/img-03",
+     "alt": "Two topics drawn as rows of numbered boxes. Topic A has partition 0 (1 to 10) and partition 1 (1 to 8); topic B has partition 0 (1 to 4), partition 1 (1 to 7) and partition 2 (1 to 12). Two producer clients append at dashed empty slots at partition ends. A consumer group has two clients: one reads B partitions 0 and 1 with offsets B.0 = 4 and B.1 = 5, the other reads B partition 2 with offset B.2 = 9.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c11-dual-write-race-6",
+   "unit": "Chapter 11",
+   "unitTitle": "Stream Processing",
+   "section": "Keeping Systems in Sync",
+   "concept": "c11-dual-write-race",
+   "rung": 6,
+   "role": "predict",
+   "kind": "mcq",
+   "q": "In the diagram, suppose one leader had ordered both writes and the search index followed it. What final value would the index hold?",
+   "options": [
+    "A, because the first request to arrive at the index is the one that wins",
+    "B, because the search index would apply the writes in the database's order",
+    "A, because each client's own write is applied last for that client",
+    "Either, because the order of two concurrent writes cannot be fixed"
+   ],
+   "answer": 1,
+   "explain": "The database applied A then B. If the index followed that same order it would also end at B, and the two would agree.",
+   "optionExplain": [
+    "A first-arrival-wins rule is not what happens here; the index would follow the leader's order instead.",
+    "Correct: following a single ordering of writes keeps both systems equal, ending at B.",
+    "There is no per-client last-write rule in the picture; the order is set by the system of record.",
+    "A single leader does fix an order for concurrent writes, which is what removes the disagreement."
+   ],
+   "rule": "A single ordering of writes, followed by every system, prevents the dual-write disagreement.",
+   "media": [
+    {
+     "id": "ch11/img-04",
+     "alt": "Timeline with lanes Client 1, Database, Search index and Client 2. Client 1 sends set X = A and Client 2 sends set X = B to each store, each getting ok. The database receives A first and then B, ending with final value X = B. The search index receives B first and then A, ending with final value X = A.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c11-replication-log-stream-6",
+   "unit": "Chapter 11",
+   "unitTitle": "Stream Processing",
+   "section": "Databases and Streams",
+   "concept": "c11-replication-log-stream",
+   "rung": 6,
+   "role": "apply",
+   "kind": "tf",
+   "q": "True or false: in the diagram, once the search index and the data warehouse consume the log, both hold X = B.",
+   "answer": true,
+   "explain": "Both consumers apply the logged changes in order, X = A and then X = B, so each ends with B.",
+   "rule": "Consumers that apply the captured change log in order end up matching the system of record.",
+   "media": [
+    {
+     "id": "ch11/img-05",
+     "alt": "Diagram: Client 1 sets X = A and Client 2 sets X = B on a system of record database. Change data capture appends these changes to a log of data changes shown as boxes with X = A then X = B. Two log consumers, a search index and a data warehouse, each read the log and apply the changes in order.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
+  },
+  {
+   "id": "c11-event-vs-processing-time-6",
+   "unit": "Chapter 11",
+   "unitTitle": "Stream Processing",
+   "section": "Reasoning About Time",
+   "concept": "c11-event-vs-processing-time",
+   "rung": 6,
+   "role": "spot-error",
+   "kind": "mcq",
+   "q": "In the diagram, a teammate says the spike after the restart means real traffic grew. What does the diagram show instead?",
+   "options": [
+    "Traffic really grew, and the restart exposed it",
+    "The web server sent requests faster while the processor was down",
+    "The actual request rate stayed at 10 while the processor worked through its backlog",
+    "The processor lost requests during the restart and later counted them twice"
+   ],
+   "answer": 2,
+   "explain": "The actual request rate line is flat. The measured rate dips to 0 during the restart and spikes when the backlog is processed, an artifact of windowing by processing time.",
+   "optionExplain": [
+    "The flat actual-rate panel contradicts a real traffic increase.",
+    "The web server row shows steady request boxes; only the processor's handling changed.",
+    "Correct: the true rate is flat and the spike is the backlog being processed in a short span.",
+    "Nothing in the picture shows loss or double counting; the delayed events are processed late."
+   ],
+   "rule": "Windowing by processing time turns delays into false dips and spikes.",
+   "media": [
+    {
+     "id": "ch11/img-07",
+     "alt": "Four stacked panels over time. A web server row of request boxes feeds a stream processor row, which has a grey restarting gap followed by a dense burst of boxes. The processing-time rate graph falls from 10 to 0 during the restart then jumps above 10 and decays. The actual request rate line stays flat at 10 throughout.",
+     "role": "figure",
+     "type": "image/webp"
+    }
+   ]
   }
  ],
  "genre": "System design",
- "sourceUse": "paraphrase",
- "mediaStore": "repo"
+ "sourceUse": "quotes+images",
+ "mediaStore": "repo",
+ "cover": {
+  "id": "front/cover",
+  "alt": "The book cover: an O'Reilly banner, the title Designing Data-Intensive Applications on red, the subtitle about reliable, scalable and maintainable systems, a leaping wild boar engraving, and the author name Martin Kleppmann.",
+  "role": "cover",
+  "type": "image/webp"
+ }
 }

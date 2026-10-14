@@ -1,3 +1,5 @@
+Version 1; kinds: system-design (chapters 1-11, with algorithms rungs in 3 and 9), architecture (chapter 12), expository (whole book). 834 ideas, 5053 questions, written by Sonnet 5.5.
+
 # Designing Data-Intensive Applications: chapter map for review
 
 Martin Kleppmann. Kleppmann explains the principles behind reliable, scalable and maintainable data systems: storage, replication, partitioning, transactions, distributed-systems trouble, and batch and stream processing.

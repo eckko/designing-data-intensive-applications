@@ -433,7 +433,9 @@
    "kind": "architecture",
    "kindConfidence": "medium",
    "kindReason": "Architecture of combined systems (dataflow, derived data) plus an ethics section in prose.",
-   "modifiers": [],
+   "modifiers": [
+    "has-code"
+   ],
    "sourceParts": [
     "chapters/ch12.txt"
    ]
